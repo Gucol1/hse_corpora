@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HSE CORPORA</title>
+</head>
+
+<body>
+{% block corpora %}
+        <div class="corpora">
+        <div class="corpora_btn_sel"><p><a class="corpora_btn" href="/peclap">PECLAP</a></p></div>
+        <div class="corpora_btn"><p class="separator">|</p></div>
+        <div class="corpora_btn"><p>SPOKEN</p></div>
+    </div>
+{% endblock %}
+<table>
+    <tr>
+        <th>word</th>
+        <th>rank</th>
+        <th>raw frequency</th>
+        <th>raw range</th>
+        <th>normalized frequency</th>
+        <th>normalized range</th>
+    </tr>
+{% for object in current_info %}
+    <tr><td>{{ object.word }}</td>
+        <td>{{ object.rank }}</td>
+        <td>{{ object.frequency }}</td>
+        <td>{{ object.range }}</td>
+        <td>{{ object.normalized_freq }}</td>
+        <td>{{ object.normalized_range }}</td>
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HSE CORPORA</title>
+</head>
+
+<body>
+<table>
+    <tr>
+        <th>word</th>
+        <th>rank</th>
+        <th>raw frequency</th>
+        <th>raw range</th>
+        <th>normalized frequency</th>
+        <th>normalized range</th>
+    </tr>
+{% for object in current_info %}
+    <tr><td>{{ object.word }}</td>
+        <td>{{ object.rank }}</td>
+        <td>{{ object.frequency }}</td>
+        <td>{{ object.range }}</td>
+        <td>{{ object.normalized_freq }}</td>
+        <td>{{ object.normalized_range }}</td>
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>

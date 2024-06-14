@@ -1,0 +1,29 @@
+INTRODUCTON
+This research paper is carried out at the request of Higher School of Economics. As any modern organization, it requires a place in Internet space to keep and share significant for university history materials and past events. The form of visualizing the storyline of HSE should be new and differ from usual news list that is used in the main web-site of university. 
+The virtual museum becomes more spread amid many foreign organizations. The concept of it relates with classic understanding such institution but includes web technology in its realization. The key elements would be copied from museum business. This research is directed to investigate existing analogues of virtual museum, to reveal principles of designing institution called museum, choose technology for its creating and build the foundation for future work. Thus, the topic of this paper is narrowing in on developing of subsystem "Exposition" for HSE-Perm Virtual Museum.
+The main challenge that team of museum developers face is the performance of what virtual museum is. Several projects of similar web sites exists but all of them are not allowed to be called as museum in virtual space, due to its static and usual representation. The question is how to merge web area and essence of museology and this paper is aimed to find the answer.
+My person interest to this topic based on complexity and utility of this project for university and other organizations. I appreciate the opportunity to be part of team whose contribution might amend the conception of museums located in the Internet. 
+This paper presumes that museum as institution has halls, expositions and artifacts. Visitor comes to museum not to wander aimlessly but be directed over all represented exhibitions. However he has ability to examine in more details any artifact and ignore context of exposition. That assumptions comes from real museums and are established by the client.
+There is no precise literature which describes developing virtual museums of that kind. Some organizations like schools and real museums have instructions and so called technical guidelines. They observed principles of replacing exhibit to the virtual space with keeping emotional aspect of perception. Maksimova T.E. in her research expounds the phenomena of virtual museum. Journal Archives & Museum Informatics presents articles about brand new museum since 90s. Several earlier concepts of virtual museums and technology for it representing are pointed in that articles. 
+Nevertheless, all observed literature includes fragmented information about how exactly should virtual museums look like in order to be modern, representative, emotionally attractive and fully equipped for keeping artifacts and quick orientation within all collected information.
+PROBLEM STATEMENT
+In the study, over twenty domestic and ten foreign virtual museums were investigated. The most demonstrative and widely known web-site is Wikipedia. But the problem is that it absolutely has not emotional aspect. Schools projects face the same problem. Visitors of this sites have ability to get full picture of subject by going far in field when they point any related url. 
+Other analogues are aimed to build 3D space where users may visit any real place sitting at home. This concept is far closer to understanding what virtual museum is, however HSE has not materials of past years in required quality to organize online tours over its history.
+This research paper would base on the same principles in constructing passing to any artifact as Wikipedia does and add conception of exposition which helps to create dipping into the atmosphere of the real museum.
+OBJECTIVES AND AIMS
+General objectives of this research lie in the fact that there is no particular performance of virtual museum essence.
+Specific research problem is that required virtual museum needs combination of museum reality with all its attributes and particular technologies, which this paper is directed to choose.
+APPROACHES 
+Building virtual museum means using web technology and languages, whether it would be HTML only or with specific markup language as XML, JS only or with JSON. As soon as client has a vague idea of what she wants to get, project would run in accordance with agile software development principles. 
+It is assumed that data would be kept on the server database and be called by PHP. 
+The frontend is going to be designed in Metro style.
+Expositions and artifacts are going to be linked through the frames, which let the site be dynamic and well-organized.
+PREDICTED RESULTS
+As the result of this paper it is going to be first and significant step to develop virtual museum for HSE-Perm. Conception of it would be defined, and particular techniques would be chosen. Client will get the forms of main page, pages of expositions and related artifacts.
+LIMITATIONS OF THE STUDY
+Limitations of this paper are concerned with time limits of study year, so there is a necessity to divide huge project on small parts and realize one of this.
+As I should focus on frontend representation, I do not go dipper in server developing and will only coordinate my actions with ones of my teammates.
+CONCLUSION
+In this research paper articles and examples of constructing virtual museums were observed. Due to this, team of developers get the concept of how virtual museum should look like. Particular markup languages and scripts for creating frontend part of the web-site were investigated and chosen
+The results of research include documented requirements and realized first stage of virtual museum development. Produced part of this phase contains frontend development in accordance with specified project boundaries. 
+After this work other teams have ability to improve architecture of museum and easily append new elements.

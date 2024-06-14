@@ -1,0 +1,71 @@
+In today's world such an event as elections is one of the key components of a democratic state like Russia under the Constitution. Consequently, elections play an increasingly important role in Russian society. In this regard, there is an issue of studying the behavior of voters. 
+
+Free elections are the central institution of democracy, so participation in elections legitimately considered as an indicator of the level of involvement of citizens in the political life of the country, an indicator of the people's attitude to the power, and the degree of confidence in it (Kolosov, Turovsky, 1996).
+     
+Along with the electoral activity in Russia is observed the political apathy of society, including young people. A level of political culture of the society reflects a significant influence on the character of electoral behavior. In recent years in spite of a certain socio-economic and political stability of the society, the percentage of protest voting is increasing. At the same time the authorities' decision to delete the column "against all" on the ballot actually blocks the receipt of adequate information on the segment of the protest vote. Especially, attention is attracted elections for local parliaments of municipal and urban districts (Malyutin, 1996).
+     
+Thus, the major problem is that, on the one hand, there is a choice of the citizens in municipalities depends or not on factors such as income, social status, gender, age and so on. On the other hand, the key factors may be, for example, the absence of a substantial portion of voters stable party identification, etc.
+     
+The purpose of the study is to identify the basic models that can explain the electoral behavior, which are peculiar to Russian voters in elections for local parliaments of municipal and urban districts.
+   
+During research it should be emphasize several important tasks:
+1. to analyze the main theoretical approaches of foreign and Russian political scientists to the concept of electoral behavior;
+2. to collect statistical socio-economic data for assessment of factors’ impact on electoral behavior of voters in elections for local parliaments of municipal and urban districts;
+3. to compare the statistical data obtained with the one in theoretical studies. 
+Professional Significance
+     
+Electoral behavior in Russia is an acute topic of study to improve the institution of elections, study the influence of citizens on the electoral process and political life in general, as well as the democratization of the society.
+     
+The problem of electoral behavior of Russian voters and ways of its formation have been studied by famous researchers such as Siegfried, Lazarsfeld, Kolosov, Campbell, Converse, Miller, Stokes and so on. 
+
+Thus, the key research issue can be formulated the following way: Does have the effect of socio-economic indicators on the electoral behavior of voters in the Russian municipalities? What model explains this behavior and how it is manifested on the results of elections in local parliaments of municipal and urban districts in Russia?
+
+Recently electoral behavior has been studied by many researchers and a huge amount works that are known to the academy are devoted it.  
+     
+The origin of electoral research dates back to the 20th century. The first studies were carried out in the framework of political geography. It was the actual founder of the French geographer A. Siegfried, who proposed the first analytical model explaining the vote that was called “human geography”. Based on the analysis of electoral statistics for the thirty-year period, he compared geographical, economic and socio-cultural variables with the results of the elections. According to his conclusions, there three interrelated factors determining voting behavior: the nature of the terrain, type of settlement and property relations, which are closely linked to each other and define the social structure and the religious climate that directly affect the vote (Harrop, 1987).
+     
+This model has played a significant role in the development of “social and environmental” trend in the study of electoral behavior, particularly prevalent in Western Europe. Since the 50s this trend has been complemented by the structural-functional approach. The main attention is being given to the identification of structural, primarily political factors of electoral behavior and configuration of the electoral space (Harrop, 1987).
+     
+Starting from this period in electoral studies fairly widespread obtain quantitative methods. It is widely used such forms of analysis as factor, typological, hierarchical, correlation and regression that are based on the types of electoral statistics.
+     
+However, in the first half of the 20th century there were limitations of statistical methods, in particular the failure of methods to identify individual behavior and its connection with the immediate context. Contradictions were related to the fact that, on the one hand, the researchers sought to analyze and explain the individual voter's choice, and, on the other hand, scholars had only aggregate data.
+     
+In order to overcome these drawbacks different types of sociological surveys become widely used, making it possible to analyze the questionnaire information about individuals that make up the electoral community. Used sociological research methods made it possible to establish a correlation between individual social, cultural and political characteristics of voters and their behavior.
+     
+The real breakthrough in resolving the major contradictions of electoral research was linked with the development of behavioral methodological approach proposed by sociologists at Columbia University under the guidance of Lazarsfeld. This approach was originated in the 40s of the 20th century and involved the socio-psychological interpretation of electoral behavior that was based on individual data. 
+     
+For the first time using the panel technology it has been studied the formation of opinion and voting behavior under the influence of the presidential election campaign. This study represents a significant breakthrough in the study of individual behavior in the elections (Harrop, 1987).
+     
+At present there are several conceptual approaches and models of electoral behavior, explaining the nature of the influence of electoral choice by long-term factors. Each model focuses on long-term factors of electoral choice considering his major. Neither model completely denies the influence of other factors, but by virtue of secondary importance of these does not give enough attention to them.
+     
+A long time it is largely determined by the content of the work on this topic was the sociological model of electoral behavior is one of the classic models of electoral behavior. Followers of this approach emphasized the group basis of the vote, actually ignoring the individual dualistic interpretation of the formation of electoral choice.
+     
+The classical work that reveals provisions of this approach is the article of Lipset and Rokkan, devoted to the justification of the impact of social and group conflicts on ideological and party differentiation (Lipset, Rokkan, 1967). According to the scholars, the differences between social groups provide a potential basis for the political conflicts at the same time creating a problem space of policy and the social base of parties.
+     
+The next model is the socio-psychological model of electoral behavior. The given approach, which came to political science from social psychology, has been developed by scholars of Michigan State University in the 50s of the 20th century. The main work within this approach is the monograph “American voters” (Campbell, Converse, Miller, Stokes, 1960), which provides an analysis of the US presidential elections in 1952 and 1956.
+     
+The impact of social parameters on political preferences is not denied, but it is mediated by a primary factor such as party identification. Party identification plays the role of a filter through which passes the information related to the three aspects including candidates, policies, relations between parties and social groups. In the long run these settings are peculiar channels through which the influence of party identification on the electoral choice (Campbell, Converse, Miller, Stokes, 1960). 
+     
+Representatives of the rational choice model in the analysis of political behavior based on two basic postulates. Firstly, the individual is selfish, that is striving to achieve their own goals. Secondly, the individual is rational, that is, he compares their result and the cost of trying to maximize the benefits while minimizing the results. The fundamental position for the rational-instrumental model put forward by E. Downs in “Economic theory of democracy” (Downs, 1957), consists in the fact that every citizen votes for the party, which he believes will give him more benefits than any other.
+ 	
+Another theory, which found the development of the model of rational choice the theory of the “voter as a consumer” of Himmelweit. He laid emphasis on the process of the individual and instrumental voter choice, depending on the specific set of problems and proposals of political forces (Harrop, 1987).
+	
+These concepts were tested on the electoral behavior of large tracts of empirical data in Western Europe and the United States. The empirical data according to the US and Western Europe as a whole confirm the conclusions of social and retrospective versions of the model of economic voting.
+
+The research is based on the sociological (or societal) approach. The sociological approach in political science is a set of techniques and methods of concrete sociological studies aimed at collecting and analyzing real facts of political life. Moreover, this approach involves finding out dependence of the society on the policy, social conditioning of political phenomena, including the impact of economic relations, social structure, ideology and culture on the political system. 
+	
+As it has been mentioned earlier, the main purpose of the research is to identify and construct the basic models that can explain the electoral behavior, which are peculiar to Russian voters in the local elections. The process of building this model is hypothesizing and testing hypotheses. In order to confirm or deny the hypotheses that were put forward we can use statistical methods such us correlation and regression analysis. These types of analysis can be conducted in a special statistical program named «Statistical Package for the Social Sciences» (SPSS). 
+     
+The aim of correlation analysis is to provide obtaining some statistical information about one variable with another variable. Correlation analysis in this study is used to identify the impact of socio-economic factors on turnout at local elections.
+     
+With regard to regression analysis the relationship between a dependent variable and a single (pair regression analysis) or more (multiple) independent variables are measured. 
+     
+During the research it is expected to have confirmation or refutation of the hypotheses that were made.
+     
+Thus, hypotheses are as follows:
+1) The major impact on voter turnout in elections for local parliaments of municipal and urban districts have the socio-economic factors such as the level of education, the level of wages, the number of pensioners and unemployment rate;
+2) Such variable as the a volume of shipped goods (works, services) in the manufacturing sector also has a significant effect on turnout in the Russian municipalities;
+3) In small settlements level of turnout is significantly higher than in large cities;
+4) A great number of supporters of party in power live in small settlements. Consequently, in large cities the percentage of votes for the United Russia is largely less. 
+
+In conclusion, it should be noted that the study of electoral behavior has the value to understand the factors that affect the election results. During the research the study and correlation regression models were built to show what factors have an influence the choice of voters in Russia. In order to achieve this goal were analyzed theoretical approaches to the study of electoral behavior. Furthermore, it was collected statistical socio-economical data that allowed revealing the main factors influenced on the voters' choice. According to the goals and objectives it is obvious that the hypotheses are confirmed. 

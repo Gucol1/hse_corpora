@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href = "{% static '/styles/base.css' %}">
+</head>
+<body>
+<header>
+    <a href="/"><div class="logo">
+        <p>HSE PERM<br>
+            Corpora</p>
+    </div></a>
+    {% block corpora %}
+    <div class="corpora">
+        <div class="corpora_btn"><p><a class="corpora_btn" href="/peclap">PECLAP</a></p></div>
+        <div class="corpora_btn"><p class="separator">|</p></div>
+        <div class="corpora_btn"><p>SPOKEN</p></div>
+    </div>
+    {% endblock %}
+</header>
+<nav>
+
+</nav>
+{% block content %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,40 @@
+One of the key peculiarities of United Kingdomsí political system that was the main factor to its success for centuries is the rule of ìWinner gets everythingî. According to R. Dhal in his work ìPolitical opposition in Western democraciesî, mentioned above factor of success allows people to see what the ruling party is capable of, and if needed to switch between The Conservative Party and the Labor Party at each new elections. Unfortunately, this system is no longer working in the proper way, today it is clear that the Liberal Democrats Party acquired enough seats in the parliament to create a coalition with any of two parties to give them most votes and promote any law, which allows to all three parties to promote their interests.
+
+The problem for us is that our objects of observation, who are voters, started to switch from the regular model to something new and that the reasons for it is unclear. This question is valid since it has been proved by Duverger (M. Duverger, 1972) that in a majoritarian system only two party system is able to succeed and in any case a country with a majoritarian system will end up with only two major parties. 
+     
+The problem lies in sorting and filtering existing electoral result of parliamentary elections in Great Britain as well as in figuring out possible reasons for peopleís deviation from regular behavior. 
+     
+For the goal, a mathematical model that is capable of telling us ‰Û„ÓÈ „Î‡„ÓÎ Ì‡‰Óthe reasons for third party to gain strength.
+
+The project proposal is in significant value since it potentially capable to explain why voters started to switch from the regular model to something new.
+
+In conclusion, it is necessary to determine that the object of observation are people who leave in 200 constituencies of the GB, which are randomly chosen. As well as that calculated outputs in descriptive statistics for votes between 4 groups of parties in 2005 and 2010 parliamentary elections in selected groups do represent valid outcomes. 
+Literature Review. As we mentioned in the name of our research, we are planning to focus mainly on Duvergerís Law (M. Duverger, 1972). There we can find theory that aims to explain why system with majoritarian representation leads to a scenario when there are only two major party left in a parliament, and that these parties are likely to represent social-democrats and liberal-conservatives. 
+     
+As the result, since in Great Britain we see exactly the system where ìwinner gets everythingî we decided that it would be a good start for us to find out why in Great Britain we see deviation, when Liberal-Democratís are grown strong enough to decide on whose position will win by creating a coalition with them. This is topical since, as it is turned out, there were no changes in a political system of Great Britain.
+     
+After we convinced ourselves that there are a strange pattern in Great Britainís case, we need to check for possible explanations among other classic theories that cover close themes. So we found ìMedian voter Theoryî by A. Downs (A. Downs, 2009). Main point of this theory is that it is rational for parties to get closer to each other on an ideology specter, since they will get more votes because of the fact that in that way, more people from further corners will vote for them since there either will be no alternative or people will act rationally and vote for the biggest party that is closest to peopleís beliefs. 
+     
+In short, the only reason why in Great Britain suddenly occurred third valid party is that it may be partiesí fault, since according to A. Dawns it is purely up to party if people are going to vote for it or not. Once more, we found no explanation that will be acceptable by us.
+     
+After classic theories we jumped to a more up to date studies, one of them is ìTactical voting at the 2010 British general election: rational behavior in local contexts?î (Johnston R., Pattie C., 2011). This study covers similar to ours problem, Johnston R. and Pattie C. are trying to explain peopleís behavior via interviewing people, trying to find reason in peopleís behavior and this is the limitation of their research. 
+     
+They focusing on peoples rational choice and explaining current situation as it is peoples rational choice, which counterdicts to Duvergerís Law (M. Duverger, 1972) and does not really provide us a full scaled picture of where or not it is true for all the regions in Great Britain. At the same time, this research showed us that some crucial aspects might still be hidden.
+     
+In order to find out we have gathered electoral data for 200 randomly selected constituencies from The electoral Commissionís website. This data includes vote results for all 200 constituencies for 2005 and 2010, divided by partyís names.
+     
+This data should help us find out patterns for shift of votes from some of the parties towards Liberal-Democrats and mace conclusions based on results.
+
+The main purpose of the research is to find out the reason why the extraordinary distribution in votes in United Kingdomís elections is present, bearing in mind that there was no changes in political system for more than three decades. In order to find it out it is necessary for to use theories created by Downs and M. Duverger who were reflecting the way two party systems operate. Their theories will help us to make a conclusion based on our computing. It is achievable by using correlation method by calculating differences in votes for each of represented parties in 200 randomly selected regions, in the United Kingdom in the last two parliament elections in 2005 and 2010.	
+     
+In order to do it we are going to use correlation analysis that will allow us to answer the question if there is a relevant correlation between different outcomes for the parliamentary elections between presented parties within the same elections. As well as to check for any possible correlations between all the parties for elections that took place in 2005 and 2010.
+	
+In addition, to make our research complete by using all of the presented data, regression analysis will be used to allow us to detect functional correlation. In other words it will allow us to tell if the changes have meaning behind them. All of this is possible to be counted in the program called SPSS.
+
+While doing the research we have faced several theories that are differ in a sense that they see different  objects to be relevant. And at the same time they all are aimed to explain why certain outcomes are happening. 
+     
+At the end we were able to divide several existing models that are trying to explain the way elections are held. Firstly, A. Downs and his ìMedian vote theoryî (A. Downs, 2009) stands for social values and claims that it is more rational to vote for the winning party and not for ones favorite due to a fact that people value self-esteem more and want their vote to be relevant in context of getting closer to a bigger social group.
+     
+The Second model is based on M. Duvergerís law (M. Duverger, 1972) and it claims that at every election a significant amount of people vote tactically. It means that if chosen party losing the race you will vote for a party that have more chances to win if this party is not in a straight opposition with chosen (example: Conservative Party and Labour Party).
+     
+In addition created database can be called complete because the amount of data it holds is more than enough for the study to be completed and it also is valid for chosen theories. 

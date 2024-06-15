@@ -1,0 +1,79 @@
+﻿Introduction
+Background. Measurement provides the basis for improved forecasting of activities, scheduling, and risk management. It can contribute to certainty in a construction program in relation to project timing and the ability of personnel to keep working to plan. Setting and monitoring specific and relevant Key Performance Indicators (KPIs) for both the main and sub-contractors will indicate current performance and trends, and show where action needs to be directed.
+
+Problem statement. Top-managers are always concerned about the issue: whether the logistics system works effectively: whether supply vessels buy raw materials and equipment at market prices, how high the risk of business interruption due to lack of necessary range of stock? In turn, suppliers constantly have to give explanations to the various services of the reasons for the growth of prices and stocks. This leads to an increase in the number of reports, and the quality of these reports is poor. The purpose of this study is to build a system of key performance indicators (KPI) logistics company "Reductor-PM" so as to ensure the preparation of quality analytical reports for management and shareholders, as well as to motivate procurers to achieve corporate goals. To create this system, it is necessary to carry out the following work:
+An analysis of the basic functions of logistics companies "Reductor-PM" and their impact on the effectiveness of the enterprise;
+To examine the theoretical basis of planning, control, monitoring and diagnostics of logistics production
+Examine material technical KPIs used in modern production companies, as well as the latest research in this area.
+To offer the most complete performance measurement system assessing logistics enterprise system and to develop a set of practical measures to introduce them.
+To assess the prospects of the implementation performance indicators in Reductor-PM
+
+Delimitations of the study. In the study there is a difference between material technical “supply” and “ensuring”. D. D. Bowersox and Closs clearly distinguished these processes, pointing out that "The supply includes the procurement and organization of external supplies of materials, manufacturing of components and / or finished products from the supplier to the manufacturing or assembly plants, warehouses or retail stores. In the process of acquiring production activities commonly referred to as procurement. The material technical ensuring - is a work in progress inventory management (semi-finished products as we move from stage to stage of the production process)" KPI development in еhe study consider only material technical supply
+
+Professional Significance. The professional significance of the study is that proposed during its KPI will allow the company under investigation to improve its organizational performance by producing quality management accounts, supporting management decisions making and increasing the effectiveness of their. 
+
+Definitions of Key Terms. Key performance indicators (KPI) - evaluate the success of an organization or of a particular activity in which it engages. Often success is simply the repeated, periodic achievement of some levels of operational goal, and sometimes success is defined in terms of making progress toward strategic goals[1]
+Performance measurement system - described by rules and procedures for capture, compilation, presentation, and communication of data - that in combination reflect key performances and characteristics of a selected process effectively enough to allow intelligent analysis leading to action if needed
+
+Literature Review
+The purpose of the review was to find information on the selection criteria to search for the appropriate KPI, as well as methods of implementation of the performance measurement system. Sink and Tuttle (1989) focused on designing performance measurement systems specifically in relation to process improvement initiatives. They have defined their design and implementation process in terms of several steps or phases:
+Preparation.
+Determination of what to measure - consensus-building techniques are advocated.
+Determination of measurement techniques to process data and create information needed 
+Determination of what data to collect. The purpose of the review was to find information on the selection criteria to search for the appropriate KPI, as well as methods of implementation of the systemt and how to source it.
+Process and output validation.
+Linkage of measurement to improvement.
+Feedback and control for measurement system improvement.
+Keebler, et al. (1999) provide what they refer to as a “logistics measurement implementation approach.” They define their process as linked to and driven by corporate strategy. Their measurement development process contains seven steps: 
+Record the existing measures. 
+Determine potential future measures. 
+Evaluate and prioritize desired measures. 
+Develop a prototype of new measures. 
+Implement and test the prototype. 
+Refine and reiterate. 
+Train the organization and roll out the new measures. 
+The above seven steps address system planning, evaluation, and implementation, but only at a very high conceptual level The model does not address measurement system design from an inter-organizational supply chain perspective.
+Neely, et al. (1996) reviewed the literature with respect to items that should be taken into consideration when designing performance measure systems. They produced a series o f prescriptive “should statements” in relation to: designing individual measures, designing performance measurement systems, addressing the interface between the performance measurement system and the environment.
+Individual indicators should be:
+be clearly defined / easy to understand.
+be purposeful.
+be practical. They should have the appropriate scale.
+form part of the control loop.
+be failsafe / self checking.
+be cost effective.
+be integrated over both the functions and the hierarchy.
+Performance measure system should
+provide data for monitoring past and planning future performance.
+provide a balanced picture of the business.
+show how results are a function of determinates.
+not contain any indicators which conflict with one another.
+Performance measure system and the environment should
+system reinforce the firm's strategies.
+match the firm's culture.
+match the existing reward systems.
+provide data for external comparison.
+Liberatore and Miller (1998) developed a model, which attempts “...to integrate Activity-Based-Costing (ABC) C into logistics strategy.” (p. 136). The model explicitly recognizes the vertical linkage among a firm’s mission, objectives, and channel strategies. The model also suggests that the performance measures linked to a firm’s mission and channel strategies to help monitor and manage performance in relation to its channel distribution strategies. Their model does not provide any guidelines for the development of supply chain management performance measures or a measurement system. What is of interest is Liberatore and Miller’s use of an “analytical hierarchy process” (AHP) to establish relative weighting factors among the various performance measures that a firm is using. This approach allows a firm to utilize a quantitative and systematic approach in defining the relative importance of each measure the firm is using in “meeting the firm’s mission.” The use of AHP helps to answer the question of what measures should receive the greatest attention.
+In order to select suitable KPIs among many others, the criteria of evaluation has to be defined. Caplice and Sheffi (1995) built on an earlier review and evaluation of logistics metrics and performed a review and evaluation of logistics performance measurement systems. As with their study of individual metrics, their primary goal was to establish useful criteria, which could be applied and utilized for evaluation purposes. They attempted to define the characteristics of a “good” logistics performance measurement system. They stated that four common principles concerning performance measurement systems can be drawn from the business strategy, management control, and managerial accounting literature: • A measurement system should be comprehensive - measure along multiple dimensions of performance to capture relevant stakeholder perspectives and requirements. • A system should be causally oriented. It should capture the drivers of performance rather than just the end results. • A performance measurement system should be vertically integrated by linking the overall corporate strategy to the particular types of decision making at each level in the organization. • Performance measurement systems should be horizontally integrated or aligned along a process rather than each function or department. The authors also added internal comparability and usefulness to the above primary criteria
+In summary, many prescriptive recommendations exist from many different authors with regard to attributes of “good” performance measurement systems. No consensus exists. Generality researches recommend the following evaluative criteria with respect to performance measurement systems:
+It (the system) should be based on and support the defined measurement system mission. The mission will derive from defined measurement system structural conditioners.
+It should be dynamic and adaptable to change. 
+It should be balanced in relation to the types of measures utilized and in terms of he perspectives of the relevant stakeholders.
+It should emphasize causality and capture drivers of performance as well as end results.
+It should be integrative - vertically, horizontally, and cross-organizationally in the case of supply chains.
+
+Methods
+First, the theoretical background of the issue will be investigated in order to understand the main processes in material-technical supply and its specific performance indicators depending on the strategic aims and objectives of the organization. Moreover, it may help in obtaining in-depth understanding the strengths and weaknesses of measurement system.
+The review of internal organizational documents will be used in order to compare the aims of the performance measurement system with the strategic aims and objectives in the organization. This will enable improvement and optimization of the material supply process taking into consideration all the specific features of organizational performance and its corporate culture. 
+The analysis and evaluation of KPIs examined in accordance with the function and aims of the material technical supply department enable to present the most effective indicators for the invent performance measurement system.
+Studying practices implementation performance indicators system of material technical supply in other company will be effective to strategy constraction for their introduction to the “Reductor-PM”
+Hence, all these methods will allow the development of the effective KPI system for it to be implemented in the business-process structure.
+
+Results Anticipated
+It is anticipated that the results of the research will allow analyzing the performance of the organization from the point of view of material technical supply management, define weaknesses of current measurement performance system, give guidelines to improve logistics system.  Developed in the course of study performance measurement system will include follow elements:
+Policy and regulations material technical supply
+Rules and methods of organization of logistics system management (planning, monitoring, accounting, analysis, execution).
+Performance indicators of logistics; rules and methods of their determination and correction.
+The performance measurement system obtained allows making effective management decision, improving logistics workflows, getting impartial assessment system of job evaluation, improving supply agents motivation. 
+
+Conclusion
+The main part of the research is submission set of performance indicators that allow achieving strategic and operational goals of the “Reductor-PM” company. Embedded KPIs allow measuring by the effectiveness of the execution process in time, quality and cost. In order to enterprise executives can make the right decisions, the results of surveys will consist performance indicators as well as the cost of their implementing and benefits.

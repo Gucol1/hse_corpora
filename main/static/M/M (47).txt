@@ -1,0 +1,81 @@
+﻿Introduction
+Background. The successful enterprises have extensive knowledge of their competitors and costumers. Analysis of the market is the process of gathering information which can help to understand how costumers will react on potential or current services and production. The owner of business conducts researches of the market all the time. He conducts market analysis when he communicates with his costumers about business or checks the prices of his competitors. Formalizing of the process can make a wealth of information about costumers, goods and services or marketplace he operates in.
+The level of complexity used in market research can cover a wide range of activity. Every business owner can take simple actions which can be made independently, for example, creation the questionnaire of short customer satisfaction or investigation of demographic data for special area. Regardless of the amount of market research budget, the time that is available for level of experience and some forms of market researches that are possible to analyze it can help to improve business solutions.
+
+Problem Statement. The central aim of the study is to understand how to make informed business decisions about innovation, start-up, growth, product, price, placement and promotion and how to develop the recommendations for improving the methodology. To address this goal the following objectives were set:
+1. to identify the peculiarities of market research performance;
+2. to recognize necessary preferences of customers;
+3. to monitor  the market competition;
+3. to identify market risks;
+4. to determine the modern technologies that are used in market;
+5. to identify opportunities to grow and increase profits;
+6. to develop a business plan
+In order to obtain valid results, a series of other resources are going to be examined:
+1. Demographics;
+2. Labour and employment data;
+3. Latest official economic indicators, which shed light on the performance of several segments of the of Russian economy;
+4. Industry sector data;
+5. General research and statistics;
+6. Secondary research.
+
+Delimitations of the Study. One of the delimitations of the study is that the results of the study cannot be fully applied to all the organizations in the market. So the data may be then operationalized to other companies partially, as every market has its own distinctive features.
+Moreover, the methods used in the study have the limitations in terms of the reliability of data obtained.  Such methods as interviews and questionnaires provide a wide range of qualitative data. However, there may be a problem with the access to specific documents and regulations. Moreover, the questions may confront the privacy policy of the organization that may result in the limited amount of information to be processed and analyzed.
+
+Professional Significance. The professional significance of the research is that the market developed by the market analyses within the last years. Moreover, this way of researching is of high importance in the establishing of a new business. This topic is also directly related to the future profession of the researcher. 
+
+Definitions of Key Terms. Market - An actual or nominal place where forces of demand and supply operate, and where buyers and sellers interact (directly or through intermediaries) to trade goods, services, or contracts or instruments, for money or barter.
+Business decision making - the thought process of selecting a logical choice from the available options.
+Business plan - a written document that describes in detail how a new business is going to achieve its goals.
+Market competition - rivalry in which every seller tries to get what other sellers are seeking at the same time: sales, profit, and market share by offering the best practicable combination of price, quality, and service.
+A SWOT analysis - a structured planning method used to evaluate the strengths, weaknesses, opportunities and threats involved in a project or in a business venture.
+Porter five forces analysis - is a framework that attempts to analyze the level of competition within an industry and business strategy development.
+PESTEL analysis – is a framework or tool used by marketers to analyze and monitor the macro environmental factors that have an impact on an organization.
+
+Literature Review
+The purpose of strategic planning is to apply a formal planning system for creating a strategy. Strategic planning is not a substitute for strategic management, despite the fact that it is not astonishing to for these two concepts to meet. The main task of strategic planning is to formalize the strategic process in the company. The strategic plan combines business activities and provides a timetable for their implementation. Creativity plays a main role, and it is also a sign of strategic planning.
+The process of a plan’s creation is more important than the plan itself. The planning process includes formulation of the objectives, analysis realization, strategy development, and the entire process of realization. It can be also understood as a space where new ideas are discovered and supported by analysis or contradicted by opponents. The planning process is also a place for discussion, contradictions and advice. In conflict situations, real motives can also be created, and sometimes alliances arise and perish. Deep and apparent arguments can appear for or against the plan. Planning is a process of original ideas, and there is a routine assessment of their realization. The planning process is a source of creativity.
+Any company which wants to succeed and develop in a market economy must take into consideration development trends in their surroundings; the company must be flexible and must adapt to new trends. PESTEL analysis is used to determine the macro environment and it is necessary understand how it affects companies in different sectors and goals of each company. Using this model it is possible to determine the relative importance of the factors used in the PESTEL analysis.
+Dominant attribute of long term worldwide economy development is the globalization, which without a doubt, significantly influences the competition. Character of the 21st century and continuous changes, in micro and macro environment of the enterprise therefore create the necessity for the enterprises to continuously look for ways how to succeed on the market. The analysis of macro environment of the enterprise enables the management to realize especially the relations and links among individual factors and also opportunities and threats on which the enterprise should concentrate on.  
+A SWOT (strengths and weaknesses, opportunities and threats) analysis is a simple, straightforward approach that can “serve as a catalyst to facilitate and guide the creation of marketing strategies that will produce desired results”.
+The primary objective of this paper is to evaluate how effectively the Market Construction Model provides a practical, helping framework for business firms engaged with impoverished segments. Using a SWOT analysis, we examine the factors that comprise both the internal (strengths and weaknesses) and external (opportunities and threats) environments of the model. This allows us to better understand how the Market Construction Model might be modified and refined in order to make it a more actionable framework for better engaging impoverished markets with an eye to fairness and justice.
+The process of decision making can be defined as “the process of making choices by setting goals, gathering information, and assessing alternative occupations.” It is necessary to know that decision making has seven steps which can give essential elements of a structured process model. 
+1. Identify the decision to be made;
+2. Gather relevant information;
+3. Identify alternatives;
+4. Weigh evidence;
+5. Choose among alternatives;
+6. Take action;
+7. Review decision and consequences.
+Porter stated that the essence of the elaboration of the competitional strategy relies on relating the firm to the environment in which it conducts its business. The company’s environment is very complex, comprising both social and economical forces. For a company, the central element of this environment is represented by the sector(s) in which it competes. The structure of a certain sector yields a powerful influence over the establishment of the competitional rules. The competition intensity in a certain sector is neither due to chance, nor to bad luck. (Porter, 1980). 
+Porter identifies five forces that shape an industry: 
+1. Rivalry among existing competitors;
+2. Threat of new entrants;
+3. Bargaining power of suppliers;
+4. Bargaining power of buyers;
+5. The threat of substitute products.
+Porter’s Five Forces model is a simple but powerful tool for understanding where power lies in a given business situation. Although the strength of each force can vary from industry to industry, the forces, when considered together, determine long-term profitability within the specific industrial sector.
+Market segmentation is an important area of marketing. In this field, researchers use clustering algorithms to divide customers into homogeneous groups. Traditionally, these groups are formed on the basis of survey data. In these surveys, the test persons often have to answer a variety of questions. With the increasing amount of digitalization and improved technical capabilities, new databases are now available for this purpose.
+The above discussion of the nature of ill-structured strategic decision problems suggests that analytic models have a subsidiary, decision aid type role in a process of policy dialogue. Further, modifications are needed to apply 'rational choice' paradigms of the decision analysis type in such contexts because in studying problems at higher levels in organizations, the range of options, their implementation and the intervention process itself, all have organizational implications. This links decision analysis and policy analysis to political and bargaining processes within the organization.
+Of course, it is not full description of theoretical background. It is just short summary of aspects, connected with analysis of market, decision making about innovation, start-up, growth, product, price, placement and promotion. Nevertheless, it will be enough to conduct research and to interpret results in a right way. 
+
+Methods
+In this study, several methods of data obtaining and analysis will be used. Firstly, a theoretical analysis will be conducted. It will include the selection and examination of individual aspects, features, and characteristics of business decision making in establishing business. Via the analysis of markets, it will be possible to group and systematize them; the general and specific characteristics may also be identified during the research in order to establish the general principle or rule. The analysis will be also accompanied by synthesis; this method helps to reach the essence of the phenomena studied.
+The method of structured interview will also be used during the investigation process. The interview will be conducted with A. G. Rilova – lecturer of «Practical business» and «Finance and credit»; A. A. Tetenov – specialist in business sphere and CEO of building company «Kudesnik». This method will help to get specific information, i.e. specific methods of decision making in establishment of new business, practical examples, and other data that may be used in the study. 
+A SWOT analysis is a structured planning method used to evaluate the strengths, weaknesses, opportunities and threats involved in a project or in a business venture. It involves specifying the objective of the business venture or project and identifying the internal and external factors that are favorable and unfavorable to achieve that objective. 
+The last method that will be used in this study is Porter five forces analysis. It is necessary to know that this method has five forces:
+1. Threat of new entrants;
+2. Threat of substitute products or services;
+3. Bargaining power of customers;
+4. Bargaining power of suppliers;
+5. Intensity of competitive rivalry.
+The use of all listed methods is sufficient to determine the current situation in the markets.
+
+Results Anticipated
+This part of proposal is organized to report on the results which are likely to be obtained with the methods mentioned. The goal of the study is to develop the recommendations for improving the methodology for good understanding of making decisions in establishing of new business. This research contains some hypothesis:
+1. To establish a new business is necessary to think creatively, discover peculiarities of the market and be quicker than the competitors.
+2. SWOT, PESTEL, Porter’s Five Forces model help to approach an issue of establishing a new business scientifically.
+3. The method of structured interview will also be used during the investigation process.
+By accomplishing the research project it would be interesting to develop the recommendations for improving the methodology for good understanding of making decisions in establishing of a new business. 
+
+Conclusion
+In conclusion author wants to indicate the main ideas of the research. This project is devoted to the study of the market analysis. Nowadays the political system, economic and social life are changing and the modernization of Russian business is aimed at the researching and discovering methods of market analyses. The introduction of effective methods of analyses would help to optimize the structure of the business plan and can help to find special peculiarities of market. In the absence of any constraints seem to open up a whole range of new opportunities. To sum up, the author can state that the project will be an attempt to develop rigorous techniques and fertile area for further market analyzing.

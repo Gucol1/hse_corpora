@@ -1,0 +1,57 @@
+The electoral behavior of citizens in the modern world is one of the trends in modern Russian political science debated in a huge number of monographs and collections of articles. In addition, social mass media and social networks are very popular today, too. That is why modern researchers in the field electoral behavior use influenced by SMM and results of voting.
+Today, Instagram is one of the most popular social network in all world and in Russia too. Trend of growth of popularity and growth is increasing is faster than that of Facebook or Twitter.
+   
+Besides Instagram concept is somewhat different, because the visual elements are the basis of the network: photos, images, video, in this case text is secondary element. This allows us to consider the role of the visual elements in the political agitation, which is also still poorly, studied, which creates additional interest.
+Problem statement. The research is based on the assumption that electoral activity and preferences of the population are affected by parties’ social media activity, especially using of Instagram.
+	
+The purpose of the research it to reveal the impact of using Instagram by political parties on the results of election 2016 to the State Duma. To achieve the purpose of the research it is important to regard the following issues
+	
+First, it is necessary to make a literature review with accumulation of electoral theories, which will be used, and factors that will be chosen to build research model.
+     
+Secondly, it is important to create the date base with a number of variables for precision and validity of research.
+     
+Finally, the obtained regression models will be interpreted.
+Professional significance. The study challenges the impact of social mass media and networks on the electoral behavior, political life and political science. It explores how political sphere professionally use modern social technologies, with particular attention paid to the roles they play in the transfer, translation and transformation of election behavior and opinions and practices in the election in the State Duma in Russia 2016. 
+     
+Research findings will help build a new base which help to understand similar processes in future and use practices for conformation of theoretical part, and to create some instruction with main aim to help  for study social mass media in context of political science
+Delimitations of the study. The research deals with the issue of influence of social media, especially social networks, expressed by the specific factors on electoral behavior of all voters, trends and not the psychological motive of an individual voter.
+
+Despite the vast opportunities of the researcher who is ready to apply methods of analysis in the field of social mass media, voting, electoral behavior, the number of serious researches in which the methods were correctly and reasonably, applied over the past decade have grown slightly. 
+	
+This is due to the novelty of the research field. It should be borne in mind that the Russian experts on studying social media or electoral behavior not done informative researches in this sphere. 
+ 	
+In this study, we consider the link between online media and election campaigns. Therefore, the most logical to start from the Presidential election in the United States and the election company of Barack Obama, who first showed how effective can be the social network to attract the electorate.
+     
+To do this, we must teach the study is a review of the US approach to the study based online resources and the electoral process works by  B. Bimber, R.Devis France T.Ridaut, D.Talbot, who also describes and analyzes the experience of modern American election campaigns, particularly the most famous Obama campaign.
+     
+The data for this research project  comes from a content analysis of political parties’ Instagram accounts of the last 4 weeks of the 2016 Russian elections ( 18 September).
+ 	
+The element of analysis is one published post that includes an image or video.
+As well as captions that will be, performing the analysis units and are encoded at a target of Instagram use the following variables:
+• Variable of personalization. The image of a party member(s) in the picture or mention about this person(s) in the comments.
+• Variable of mobilization. Posts with aim to activate voters to act, participate in the elections, in political life, and so on.
+• Variable of broadcast. It displays party interests, views, program, publishes news and some specific information. 
+     
+The analysis will be carried out from the point of view of the user social network, so, all posts will be treated exactly as they assess the ordinary voters (using the criteria, which we describe before).
+Based on this logit it will be built and broken model, which will also serve as a method for our study.
+It is expected that with the help of the data obtained, we can draw conclusions about the impact of different visual and sends text messages to voter’s behavior. 
+
+Based on our database and results of election (18 September 2016) we can find some relationship between using Instagram as a political tool and election. In addition, it will be useful information and problem of such communication, not for future political science and next researches, election campaigns and for companies, which works with political technologies, political brands or political PR. 
+Perhaps, results of our research will be used in our not only city or country, but also even in global political science. Because today SMM in political science is one of the popular and perspective trend. Moreover, this research will be basis or part for new researches with connecting with this theme. 
+	
+Also we suppose that the government authorities will be use results of this research for using social mass media with aim to do their work more effective and have communication with people for competent policy.
+Conclusion
+
+To sum up, we can suggest that SMM in political science is a a phenomenon that will soon be a long time in the spotlight. Therefore, we could not leave it unattended and connection with elections, too.  It is not secret that the greatest part of social networks have a tremendous impact on all spheres of social life, and political sphere is no exception. 
+     
+Thus, in the course of the study, we found and confirmed that nowadays there is evident role of social mass media (in our case it is Instagram) on the political life of state, on results of elections and work of election campaigns.
+     
+We conducted a content analysis of about 500 party postings on Instagram, collected during the four weeks before election.
+     
+The result of our research project shows that the platform of Instagram on the Russian election 2016 was mainly used for broadcasting rather than for mobilization. However, we see that not all parties used Instagram effectively and this fact we can connect with results of elections. So, the parties who actively used Instagram in election campaign today have the greatest part of places in the State Duma.
+     
+The presented findings of database analysis give a scientifically confirmed glimpse on how political parties use and perform on Instagram and impact of this using on the political process.
+	
+Thus, with the growing popularity of social networks, increasing of  their apparent diversity and the possibility of using them as a tool of propoganda, and in general as a tool to influence policy, academic interest in this area is growing. There are studies, such as «Tools and Methods for Capturing Twitter Data during Natural Disasters» by Bruns, Axel, è Yuxian Eugene Liang, «Twitter. Gossip or a huge impact by D. Goldbeka, D.Graymsa and A.Rodzhersa or work by  A.Eldin "Instagram role in influencing young people during the election campaign in Bahrain 2015" in which the data was obtained that the social network was a useful platform for increasing the activity of young voters.
+     
+Such work will also serve as a visual sample and partial example for our example.

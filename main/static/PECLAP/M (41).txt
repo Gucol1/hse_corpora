@@ -1,0 +1,71 @@
+﻿Introduction
+Background. Our present day life is unthinkable without loss. Accordingly, all manufacturing companies face the loss sooner or later. Correct production loss management is the basis of successful activity. Identification and reduction of the production loss are foreground tasks of any modern company. Eliminating loss can be achieved through the introduction different concepts. There are few concepts that share the emphasis on reduction production loss: six sigma, lean manufacturing and theory of constraints. Many organizations strive to reduce production loss to gain an advantage over their main competitors or to reduce costs, but only few companies achieve this goal. Most companies make many mistakes when introducing the concept to their production. So, it is necessary to apply an individual approach to the elimination of production loss to each company. This problem is currently an active area of research. 
+An increasing amount of publications in the sphere of production loss management signify the growing interest in this sphere between scholars.
+
+Problem Statement. I set myself the aim to to identify appropriate ways of eliminating the production loss.
+There are following tasks to achieve the goal:
+to review the extensive literature in the field of the study production loss
+to examine all types of production loss carefully
+to explore ways of identifying production loss
+to get acquainted with concepts of production loss management
+The general purpose of proposal will be to attempt to explore the approaches to the problem that various theorists and practicals have advocates, furthermore, I will make a link with the existing knowledge about production loss management and my attention will centre on adding ways of production loss eliminating. Here the emphasis will not so much on development of a production loss classification as such but rather on investigating in some depth the ways of identifying and eliminating process loss.
+
+Professional Significance. Significance of the study. In the framework of the project the main interest and emphasis will centre on the elimination of the production loss. The overall goal involves a necessity to determine existence of production loss. To attain the goal set it will be relevant to follow and develop certain of different scholars insights. Moreover, another specific aim of the analysis involves a necessity to consider the production loss classification. In much of the literature this part is seen as essential to better understanding production loss management.
+
+Delimitations of the Study. There are some delimitations of this proposal. The main delimitation is theoretical. I have considered only the key theoretical issues in my research. So, some theoretical issues have not been studied, such as persuasion methods, applied to leadership and colleagues to enter a specific concept of production loss management. There are also no examples of the implementation of production loss concepts in different companies. Delimitations in consideration of some theoretical issues allow to focus on more important topics, such as the types of loss, principles of production loss concepts, сomparison of concepts and others.
+
+Definitions of Key Terms. Production loss is a disruption in normal operations that leads to inefficiency(Shingo, 2006).
+
+Literature Review
+There are seven main types of production loss according to the Taiichi Ono, the Japanese engineer: overproduction, wait time, transportation waste, processing waste, motion/movement waste, inventory waste,  defects waste. 
+Overproduction. Producing more products than is needed, faster than needed or before they are needed is a waste. Adding extra units to the quantity needed “just in case” or building to a predefined lot or batch size is also wasteful.
+Wait time. This type of production loss occurs, when a worker cannot proceed with the next task in a process.  There are workers waiting and doing nothing, thus wasting their time or making others waste them, while others workload is excessive. Consequences of wait time waste Personnel that cost doing nothing.
+Transportation waste is any material movement that does not directly support immediate production. When product is transported to a place other than the next process location or, the next process is not located adjacent to the current one.
+Processing waste is unnecessary step, either production or communication, that adds no value to a product or service. It occurs when the company executes an operations, but the customer do not want to pay for what is being done.
+Motion/movement waste is  any movement of people which does not contribute to add value to the product or service. Persons create a false impression of being working, moving from one place to another, while in reality, they are doing nothing. They are costing while adding no value.
+Inventory waste is any supply of materials or goods in excess of what is required to deliver products in a Just- In-Time manner. These details will need to be processed, moved, counted, stored and can not be shipped to customers.
+Defects waste is costs on sorting, repairing or repairing products. It includes cost of materials scrapped due to defects. Loss also consist in the cost of goods returned by customers, recall campaigns and recycling part of the products.
+Masaaki Imai, a Japanese organizational theorist and management consultant, identifies the eighth type of production loss - a waste of time(Masaaki, 2010). Inefficient using of time leads to stagnation. Materials, goods, information and documents are in the same place without adding value.
+Jeffrey Liker in his book «The Toyota Product Development System: Integrating People, Process And Technology» considered unrealized creativity - losing time, ideas, skills, improvements and learning experiences because of inconsiderate attitude of managers to employees as the eighth  production loss type(Liker, 2006). 
+Managers Canon moved away from the classical classification developed by T. Ono, and identified nine types of production loss: incomplete production, reject rate, equipment, costs, side work, design(the production of goods with the number of functions exceeds the required), capabilities(using humans to perform work that can be mechanized or assigned to less skilled people), movement(failure to comply with work standards), exploration of new products (Masaaki, 2010).
+In this proposal will be used classification of Taiichi Ono with the seven main types of production loss and the eighth type of production loss according to Masaaki Imai - waste of time.
+There can be both one and several types of production loss in the company. Any type of production loss can be reduced or eliminated. 
+Numerous attempts have been made to identify the most successful concept of the production loss management. 
+There are three the most common concepts of production loss management: lean manufacturing, six sigma concept and the theory of constraints. The aim of these concepts is the elimination of loss. It is necessary not only to eliminate but also prevent further occurrence and development of loss. 
+Lean manufacturing is a comprehensive set of techniques that, when combined and matured, will allow to reduce and then eliminate the seven wastes. This system not only will make  company Leaner, but subsequently more flexible and more responsive by reducing waste(Wilson, 2010). Holweg M. in a vast study that sought to discuss the genealogy of lean production, points out that lean is the result of a dynamic learning process. In other words, it is not a package of resources but rather a model that helps organisations have a clear vision of improvements(Howleg, 2007). There are five main stages in the implementation of this concept: define, measure, analyze, improve and control.
+Kaliym A. Islam in his book wrote that Six Sigma is a methodology that aligns core business processes with customer and business requirements; systematically eliminates defects from existing processes, products, and services; or designs new processes, products, and services that reliably and consistently meet customer and business requirements (Kaliym, 2006)
+A major difference between Six Sigma and other concepts, is that Six Sigma incorporates a control phase with ongoing checks in order to ensure that once improvements are achieved, they are not a one-time or temporary phenomenon, but maintained over time. Six Sigma methodology gives those who use it a structured yet flexible process to follow, a large and expanding tool set to employ, a configuration to clarify roles and responsibilities, and a governance to ensure compliance. Six Sigma can be used to improve existing processes or create a new product or process. There are five stages in this concepts: identification of value, identification of stream, alignment of stream, pulling and continuous improvement (Thomas, 2008).
+The third main concept is the theory of constraints. It combines 2 previous concepts: lean manufacturing and Six Sigma concept. It allows employees to focus on really important for production and services. It allows not engaged in the improvement that ultimately does not have any economic effect or indirect impact on the product or service. Employees not engaged in the improvement that ultimately does not have any economic effect or indirect effect on the product or service when implementing this concept. There are also five main stages in this concept: to find the limit, to use limitation, to subordinate process, to remove the limit and to repeat the cycle. Over the last decades, many organizations have deployed either six-sigma or lean and tried to renovate their operating and supporting systems based on these concepts. Integrated the two strategies into a more powerful and effective hybrid, overcoming the limitations and retaining most of the strengths of each strategy.
+Many people are familiar with the terms Lean Manufacturing and Six Sigma, but they are unsure as to which approach is right for their business. Six Sigma works on the principle that reducing variation gets to the root of any problem. And many people also see it as a technically superior way of working. On the other hand, Lean Manufacturing uses basic improvements to make business processes more effective. 
+Lean thinkers believe that using resources for any goal other than value for the customer, is wasteful, and should be eliminated. 
+There are several similarities between these concepts:
+Both approaches require the use of teams, they are the best if they are managed by experienced people, they require behaviour and systems change and both concepts can save significant time and money if they are effectively implemented.
+It should be noted that each concept should be individualized to each company. 
+After discovering of a number of production loss and introduction of some concept, new production loss can occur. This happens quite often in production. In this case, it will be necessary to return to the beginning of the study and introduce another concept. This action can be repeated many times.
+
+Methods 
+This part of the proposal explain the methods used in carrying out the study. There are a great variety of means at our disposal for analyzing identification and elimination of production loss. 
+The first method is the analysis of the literature on the topic of production loss management. It will help to study the problem in more details, will coordinate next steps. This method is one of the most important, because it aims at right action. 
+The second method is analysis of companie’s documentation. This method will allow to study the history of the company, examine the errors which have been encountered in the past and prevent their occurrence in the future. Besides it will be easier to identify production loss due to this method. Moreover it is necessary to explore the statistics of the company. The statistics displays much necessary information about production.
+The third method is a survey of company employees. It was necessary to interview both experts and working, because they face with production and they are able to give an adequate assessment of the production and assess production’s problems. The survey will be conducted through questionnaires and interviews. The survey will allow to answer more abstract questions and questioning strongly rooted in the problem.
+
+Results Anticipated
+This part of the proposal will report on the results which are likely to be obtained with the methods mentioned. Production loss will be reveale due to the studying the literary sources and documents of the company in detail and conducting the survey. It will be necessary to  develop ways to reduce or eliminate production loss after revealing them. Thus, the most suitable concept will be chosen for the company. It must be remembered that new production loss can appear after the application of the concept. In this case it will be necessary to study the production again.
+
+Conclusion
+Production loss management is an integral process of any company, regardless of its size and activities. It is essential to obtain maximum returns at minimum cost. Loss eliminating is one of the steps leading to the effective functioning of the company. There are eight types of loss which can appear in the production. There are 3 main concepts, which was reviewed in this proposal. It is necessary to study the presence of each loss in the production and apply the most appropriate concept. It must be remembered that each production is special and any concept can be recommended during the study all features.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

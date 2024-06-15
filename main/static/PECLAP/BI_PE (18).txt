@@ -1,0 +1,28 @@
+Problem statement
+The HSE needs in the system, which analyzes and stores the data, associated with teaching and academic aspects, and builds reports on these activities. However, in the present time, there is website, where the staff adds information about personal education, readership, publications and research, courses of study and etc. Information about publication used for building a report, however, information about academic aspects is not used. Therefor, there are the work labour input problems, because of the need to collect unstructured data with each employee.
+In order to solve the problem it is necessary to develop the system for document management.
+Objectives and aims
+The aim of the present work is to development an application to organization of a unified document system, which provides a solution to the problems associated with teaching and academic aspects of HSE staff. This application curriculums, publications, teaching complexes, and reports on these points, which the system generates.
+Specific Objectives:
+1.	Analyze of the staff works of the HSE related to the teaching and academic aspects.
+2.	Consider the existing solutions on the sphere of the teaching and academic aspects.
+3.	Create database for store the information about publications and teaching of the University.
+4.	Develop of a system, which record academic and teaching aspects. This system is based on database provisioning, the data is analyzed, and in the result, reports are generated.
+5.	Conduct the testing of the system and have pilot deploying.
+Methods and tools
+The HSE has the official website (http://hse.ru) with the information about publications of staff, education courses and his experience. Using the regular expressions, the system analyzes and finds the necessary information (bibliographic references on the publication) on the website, and enters into the database. The necessary data: type of publication, authors, publication name, publishing company (magazine or book), year, pages.
+The database is designed in SQL-server and integrated into Visual Studio. The application is developed using technologies for creating web applications ASP.NET. 
+The graph grammars and decision trees will complete the task of building reports, videlicet, filling the tables with data.
+Predicted results
+The figure 1 shows the interaction diagram from an analysis of the subject domain and processes associated with document management. The designed system will work under this diagram. Each teacher will only have access to their data and can create reports on their activities. While as, the training directorate will have will have access to all the data and generate reports across the Department information technology of business of the HSE in the Perm.
+Limitations of the study
+The main limitations of the study is users of the system are only staff of the department information technology of business of the HSE in the Perm. In the ideal situation, the system should generate reports throughout the University on the Perm. But, this situation is impossible, because there are time limitation, the performer limitation and experience gap.
+However, this limitation will help better understand the topic and more successful to test the system.
+The information about publication of the staff will be extracted only from the website of University. In the best way, the information should be extracted from the several sources, in order to exclude the situation of absence of a publication in one of the sites.
+However, in the present time, the website of the University is superabundant, because, the staff lists information about a publication and teaching on the site, which should be included on the reports.
+Conclusion
+In this work, it has been attempted to analyze implementation area of the teaching and academic aspects of the university staff. In the course of the work, it has been defined the main problems and ways of solutions.
+It has been defined the system development requirements, methods and tools for development application. The system will analyzed the information about staff of the department information technology in the business, and will take part of the information from the. The system will developed on the MS Visual Studio and database will designed on the SQL Server.
+After the system will be developed and tested, the system will allow to reduce the work labour input of recording of the teaching and academic activities. The training directorate will spend the time saved on the other work and that will improve his emotional state. 
+Area of the research is the department information technology in the business. Users of the system are only staff of this department. In addition, analyzed website is official website of the HSE. These restrictions will allow to achieve the best result, as it will reduced the complexity of the work and the testing area.
+In the future, the system will further developed: bugs fixed, the user area is expanded (Faculty of the Economics, Management and Business Informatics or all University in the Campus Perm).

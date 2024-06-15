@@ -14,6 +14,18 @@
         <div class="corpora_btn"><p>SPOKEN</p></div>
     </div>
 {% endblock %}
+{% block content %}
+    <table>
+    {% for line in current_info %}
+        <tr>
+        <td><p>{{ line.left_print }}</p></td>
+        <td><p>{{ line.query }}</p></td>
+        <td><p>{{ line.right_print }}</p></td>
+        </tr>
+{#Конкордансы#}
+    {% endfor %}
+    </table>
+{% endblock %}
 <table>
     <tr>
         <th>word</th>

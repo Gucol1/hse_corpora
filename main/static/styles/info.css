@@ -55,3 +55,26 @@ header .corpora div, nav .corpora div{
     padding: 7px 12px 7px 12px;
     border-radius: 25px;
 }
+
+.info_block{
+    background-color: white;
+    margin: 20px;
+    border-radius: 25px;
+    color: #102D69;
+    padding: 5px 20px 5px 20px;
+    font-family: "HSE Sans", sans-serif;
+    font-size: 25px;
+}
+
+table, th, tr, td{
+    border: 1px solid #102D69;
+    padding: 5px;
+}
+
+td{
+    text-align: center;
+}
+
+th:first-child{
+    text-align: left;
+}

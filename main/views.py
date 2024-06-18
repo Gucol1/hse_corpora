@@ -4,8 +4,10 @@ import textblob
 from django.shortcuts import render
 from textblob import TextBlob
 from collections import Counter
+from .functions import fill_peclap_info
 from .models import Main
 import nltk
+from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import gutenberg, PlaintextCorpusReader
 from nltk.text import Text
 # nltk.download('wordnet')
@@ -14,59 +16,74 @@ from nltk.text import Text
 
 # Create your views here.
 
+#Все дисциплины
 url = 'C:/Users/Admin/HSE_CORPORA/main/static/PECLAP'
-info = ''
-raw_info = []
-folders = ''
-# for filename in os.listdir(url):
-#     folder_url = os.path.join(url, filename)
-#     count = 0
-#     if filename == 'BI_PE':
-#         count = 58
-#     elif filename == 'E':
-#         count = 68
-#     elif filename == 'HIST':
-#         count = 43
-#     elif filename == 'LAW':
-#         count = 77
-#     elif filename == 'M':
-#         count = 58
-#     elif filename == 'POLIT':
-#         count = 29
-#     corpus = gutenberg.words()
-#     for i in range(1, count + 1):
-        # file = os.path.join(folder_url, filename)
-        # name = file + ' (' + str(i) + ').txt'
-        # # print(name)
-        # with open(name, 'r') as f:
-        #     lines = f.readlines()
-        #     # print(lines)
-        #     lines = ' '.join(lines)
-        #     raw_info.append(lines)
-        #     info += lines
-        # corpus += gutenberg.words(name)
-wordlists = PlaintextCorpusReader(url, '.*', encoding='cp1251')
-# print(wordlists.raw())
-words = wordlists.words(fileids=wordlists.fileids())
-count = 0
-# for word in words:
-#     count+=1
-#     print(word, count)
-raw_text = wordlists.raw()
-# print(corpus_view)
-info = info.lower()
-tokens = 676301
-proportion = 1000000/676301
+wordlists_all = PlaintextCorpusReader(url, '.*', encoding='cp1251') # Все дисциплины
+words_all = wordlists_all.words(fileids=wordlists_all.fileids()) # Все слова
+raw_text_all = wordlists_all.raw() # Весь текст
+
+#БИ_ПИ
+wordlists_BI = PlaintextCorpusReader(url, 'BI.*', encoding='cp1251') # БИ_ПИ
+words_BI = wordlists_BI.words(fileids=wordlists_BI.fileids()) # СЛОВА БИ_ПИ
+raw_text_BI = wordlists_BI.raw() # ТЕКСТ БИ_ПИ
+
+#Эконом
+wordlists_E = PlaintextCorpusReader(url, 'E.*', encoding='cp1251') # Эконом
+words_E = wordlists_E.words(fileids=wordlists_E.fileids()) # СЛОВА Эконом
+raw_text_E = wordlists_E.raw() # ТЕКСТ Эконом
+
+#История
+wordlists_HIST = PlaintextCorpusReader(url, 'HIST.*', encoding='cp1251') # История
+words_HIST = wordlists_HIST.words(fileids=wordlists_HIST.fileids()) # СЛОВА История
+raw_text_HIST = wordlists_HIST.raw() # ТЕКСТ История
+
+#Юрист
+wordlists_LAW = PlaintextCorpusReader(url, 'LAW.*', encoding='cp1251') # Юрист
+words_LAW = wordlists_LAW.words(fileids=wordlists_HIST.fileids()) # СЛОВА Юрист
+raw_text_LAW = wordlists_LAW.raw() # ТЕКСТ Юрист
+
+#Менеджмент
+wordlists_M = PlaintextCorpusReader(url, 'M.*', encoding='cp1251') # Менеджмент
+words_M = wordlists_M.words(fileids=wordlists_HIST.fileids()) # СЛОВА Менеджмент
+raw_text_M = wordlists_M.raw() # ТЕКСТ Менеджмент
+
+#Политология
+wordlists_POLIT = PlaintextCorpusReader(url, 'POLIT.*', encoding='cp1251') # Политология
+words_POLIT = wordlists_POLIT.words(fileids=wordlists_POLIT.fileids()) # СЛОВА Политология
+raw_text_POLIT = wordlists_POLIT.raw() # ТЕКСТ Политология
+
+#Количество токенов и создание токенов
+tokenizer = RegexpTokenizer(r'\w+') # Токенизатор
+
+tokens_all = tokenizer.tokenize(raw_text_all.lower()) # Все токены
+tokens_BI = tokenizer.tokenize(raw_text_BI.lower()) # ПИ_БИ токены
+tokens_E = tokenizer.tokenize(raw_text_E.lower()) # Эконом токены
+tokens_HIST = tokenizer.tokenize(raw_text_HIST.lower()) # История токены
+tokens_LAW = tokenizer.tokenize(raw_text_LAW.lower()) # Юрист токены
+tokens_M = tokenizer.tokenize(raw_text_M.lower()) # Менеджмент токены
+tokens_POLIT = tokenizer.tokenize(raw_text_POLIT.lower()) # Политология токены
+
+#Словарь с информацией о токенах
+tokens_dict = dict()
+tokens_dict['A'] = {'Name':'Computer Science','Files':59,'Tokens':len(tokens_BI)}
+tokens_dict['B'] = {'Name':'Law','Files':77,'Tokens':len(tokens_LAW)}
+tokens_dict['C'] = {'Name':'Political Science','Files':29,'Tokens':len(tokens_POLIT)}
+tokens_dict['D'] = {'Name':'Management','Files':58,'Tokens':len(tokens_M)}
+tokens_dict['E'] = {'Name':'Economics','Files':68,'Tokens':len(tokens_E)}
+tokens_dict['F'] = {'Name':'History','Files':43,'Tokens':len(tokens_HIST)}
 
 
 
-def word_frequencies(words):
-    return Counter(words)
+tokens_all_len = len(tokens_all) #680842
 
 
+#Пропорция для подсчёта нормализованного интервала и частотности
+proportion = 1000000/tokens_all_len
 
 def home(request):
     current_info = Main.objects.all()
+    frequency_list = Counter(tokens_all) # Частоты слов
+    # print(frequency_list)
     # info_info = []
     # words = TextBlob(info)
     # words = words.words
@@ -111,9 +128,13 @@ def home(request):
     return render(request, 'home.html', context={'current_info': current_info})
 
 def peclap(request): # Concordance
-    current_info = Main.objects.all()
-    # print(wordlists.raw())
-    text = Text(list(raw_text.split(' ')))
-    print(text)
-    current_info = text.concordance_list('the', lines=100000)
-    return render(request, 'peclap.html', context={'current_info': current_info})
+    text = Text(list(raw_text_all.split(' ')))
+    query_word = 'puppets' # Слово для поиска конкорданса
+    current_info = text.concordance_list(query_word, lines=100000)
+    concordances_length = len(current_info) # Количество контекстов
+    return render(request, 'peclap.html', context={'current_info': current_info,
+                                                   'concordances_length':concordances_length})
+
+def peclap_info(request):
+    return render(request, 'peclap_info.html', context={'tokens': tokens_all_len,
+                                                        'tokens_dict': tokens_dict})

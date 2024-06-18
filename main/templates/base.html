@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href = "{% static '/styles/base.css' %}">
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
 <header>
@@ -14,14 +16,16 @@
     </div></a>
     {% block corpora %}
     <div class="corpora">
-        <div class="corpora_btn"><p><a class="corpora_btn" href="/peclap">PECLAP</a></p></div>
+        <div class="corpora_btn"><p><a class="corpora_btn" href="/peclap_info">PECLAP</a></p></div>
         <div class="corpora_btn"><p class="separator">|</p></div>
         <div class="corpora_btn"><p>SPOKEN</p></div>
     </div>
     {% endblock %}
 </header>
-<nav>
 
+<nav>
+    {% block navbar %}
+    {% endblock %}
 </nav>
 {% block content %}
 {% endblock %}

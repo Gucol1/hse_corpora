@@ -1,15 +1,19 @@
 {% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>HSE CORPORA</title>
+    {% block head %}
+    <link rel="stylesheet" href= "{% static '/styles/info.css' %}">
+    {% endblock %}
 </head>
 
 <body>
 {% block corpora %}
         <div class="corpora">
-        <div class="corpora_btn_sel"><p><a class="corpora_btn" href="/peclap">PECLAP</a></p></div>
+        <div class="corpora_btn_sel"><p><a class="corpora_btn" href="/peclap_info">PECLAP</a></p></div>
         <div class="corpora_btn"><p class="separator">|</p></div>
         <div class="corpora_btn"><p>SPOKEN</p></div>
     </div>
@@ -29,38 +33,37 @@
 
 
 {% block content %}
-{# Количество конкордансов #}
-    <p>{{ concordances_length }}</p>
-    <table>
-    {% for line in current_info %}
-        <tr>
-        <td><p>{{ line.left_print }}</p></td>
-        <td><p>{{ line.query }}</p></td>
-        <td><p>{{ line.right_print }}</p></td>
-        </tr>
-{#Конкордансы#}
-    {% endfor %}
-    </table>
-{% endblock %}
+<div class="info_block">
+<p><b>Name: </b> Perm Corpus of Learner Academic Projects (PECLAP)</p>
+<p><b>Language: </b> English</p>
+<p><b>Type: </b> Written</p>
+<p><b>Period: </b> 2015-2020</p>
+<p><b>Tokens: </b> {{ tokens }}</p>
+<p><b>Files: </b> 304</p>
 
 <table>
-    <tr>
-        <th>word</th>
-        <th>rank</th>
-        <th>raw frequency</th>
-        <th>raw range</th>
-        <th>normalized frequency</th>
-        <th>normalized range</th>
-    </tr>
-{% for object in current_info %}
-    <tr><td>{{ object.word }}</td>
-        <td>{{ object.rank }}</td>
-        <td>{{ object.frequency }}</td>
-        <td>{{ object.range }}</td>
-        <td>{{ object.normalized_freq }}</td>
-        <td>{{ object.normalized_range }}</td>
-    </tr>
+<tr>
+    <th>Discipline</th>
+    <th>Files</th>
+    <th>Tokens</th>
+</tr>
+    {% for item in tokens_dict.values %}
+                <tr>
+                    <th>{{ item.Name }}</th>
+                    <td>{{ item.Files }}</td>
+                    <td>{{ item.Tokens }}</td>
+                </tr>
 {% endfor %}
+<tr>
+    <th>Total</th>
+    <td>334</td>
+    <td>{{ tokens }}</td>
+</tr>
 </table>
+
+</div>
+
+
+{% endblock %}
 </body>
 </html>

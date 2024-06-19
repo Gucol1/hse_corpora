@@ -72,59 +72,56 @@ tokens_dict['D'] = {'Name':'Management','Files':58,'Tokens':len(tokens_M)}
 tokens_dict['E'] = {'Name':'Economics','Files':68,'Tokens':len(tokens_E)}
 tokens_dict['F'] = {'Name':'History','Files':43,'Tokens':len(tokens_HIST)}
 
-
-
-tokens_all_len = len(tokens_all) #680842
-
+#Количество токенов
+tokens_all_len = len(tokens_all)
 
 #Пропорция для подсчёта нормализованного интервала и частотности
 proportion = 1000000/tokens_all_len
+
+# Main.objects.all().delete()
 
 def home(request):
     current_info = Main.objects.all()
     frequency_list = Counter(tokens_all) # Частоты слов
     # print(frequency_list)
-    # info_info = []
-    # words = TextBlob(info)
-    # words = words.words
-    # current_info = word_frequencies(words)
-    # sorted_keys = sorted(current_info.keys(), key=current_info.get, reverse=True)
-    # for key in sorted_keys:
-    #     # print(key + ': ' + str(current_info[key]))
-    #     info_info.append(str(key)+' '+str(current_info[key]))
+    info_info = []
+    words = tokens_all
+    current_info = frequency_list
+    number, rank, count, frequency = 1, 1, 0, 0
+    sorted_frequency = sorted(frequency_list.items(), key=lambda item: item[1], reverse=True)
+
+    # print(sorted_frequency) # Частоты
+    # print(wordlists_all.fileids()) # Названия всех файлов
     #
-    # current_info = info_info
-    # # print(current_info)
-    # number = 1
-    # rank = 1
-    # count = 0
-    # frequency = 0
-    # for i in range(len(current_info)):
+    # for elem in sorted_frequency:
     #     prev = frequency
-    #     word = current_info[i]
-    #     curr_word = word.split(' ')[0]
-    #     if curr_word.isalpha():
-    #         for text in raw_info:
-    #             text = text.lower()
-    #             if curr_word in text:
-    #                 count += 1
-    #                 continue
+    #     word = elem[0]
+    #     frequency = elem[1]
+    #     for filename in wordlists_all.fileids():
+    #         file = open(os.path.join(url, filename), 'r', encoding='cp1251')
+    #         text = file.read().lower()
+    #         # print(tokens)
+    #         if word in text:
+    #             count += 1
+    #             continue
     #
-    #         word += ' '+str(count)
-    #         current_info[i] = word
-    #         frequency = word.split(' ')[1]
-    #         if prev == frequency:
-    #             rank = rank
-    #         else:
-    #             rank = number
-    #         number += 1
+    #     # print(word, count)
     #
-    #         if count>int(frequency):
-    #             count = frequency
-    #         word_obj = Main.objects.create(word = curr_word, rank = rank, frequency = frequency, range = count,
-    #                                        normalized_freq=proportion*int(frequency),normalized_range=proportion*int(count))
-    #         word_obj.save()
+    #     if prev == frequency:
+    #         rank = rank
+    #     else:
+    #         rank = number
+    #     number += 1
+    #
+    #     if count>int(frequency):
+    #         count = frequency
+    #
+    #     word_obj = Main.objects.create(word = word, rank = rank, frequency = frequency, range = count,
+    #                                    normalized_freq=proportion*int(frequency),normalized_range=proportion*int(count))
+    #     word_obj.save()
+    #
     #     count = 0
+
     return render(request, 'home.html', context={'current_info': current_info})
 
 def peclap(request): # Concordance
@@ -138,3 +135,7 @@ def peclap(request): # Concordance
 def peclap_info(request):
     return render(request, 'peclap_info.html', context={'tokens': tokens_all_len,
                                                         'tokens_dict': tokens_dict})
+
+def peclap_word(request):
+    current_info = Main.objects.all()
+    return render(request, 'peclap_word.html', context={'current_info': current_info})

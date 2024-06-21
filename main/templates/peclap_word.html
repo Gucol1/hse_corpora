@@ -35,43 +35,62 @@
 {% block content %}
 
 <div class="info_block">
-<div class="filters">
-        <p><b>Filters</b></p>
-        <p><b>Discipline:</b></p>
-            <form method="post">
-             {% csrf_token %}
-                    <select name="disciplines" id="select1">
-                        <option value="default">{{ discipline }}</option>
-                        <option value="All">All</option>
-                        <option value="Computer Science">Computer Science</option>
-                        <option value="Law">Law</option>
-                        <option value="Political Science">Political Science</option>
-                        <option value="Management">Management</option>
-                        <option value="Economics">Economics</option>
-                        <option value="History">History</option>
-                    </select>
-                <button type="submit" value="Discipline" class="filter_btn">APPLY</button>
-            </form>
-</div>
-
-<script type="text/javascript">
-
-    </script>
-
-
 <div class="settings">
     <p><b>Settings</b></p>
-    <form>
+    <form method="get">
         {% csrf_token %}
+        <div>
+        <legend>Disciplines:</legend>
+                <select name="disciplines" id="select1">
+                    {% if discipline == 'All'%}
+                <option value="All" selected>All</option>
+                        {% else %}
+                        <option value="All">All</option>
+                    {% endif %}
 
+                    {% if discipline == 'Computer Science'%}
+                        <option value="Computer Science" selected>Computer Science</option>
+                    {% else %}
+                        <option value="Computer Science">Computer Science</option>
+                    {% endif %}
+
+                    {% if discipline == 'Law'%}
+                        <option value="Law" selected>Law</option>
+                    {% else %}
+                        <option value="Law">Law</option>
+                    {% endif %}
+
+                    {% if discipline == 'Political Science'%}
+                        <option value="Political Science" selected>Political Science</option>
+                    {% else %}
+                        <option value="Political Science">Political Science</option>
+                    {% endif %}
+
+                    {% if discipline == "Management"%}
+                        <option value="Management" selected>Management</option>
+                    {% else %}
+                        <option value="Management">Management</option>
+                    {% endif %}
+
+                    {% if discipline == "Economics"%}
+                        <option value="Economics" selected>Economics</option>
+                    {% else %}
+                        <option value="Economics">Economics</option>
+                    {% endif %}
+
+                    {% if discipline == "History"%}
+                        <option value="History" selected>History</option>
+                    {% else %}
+                        <option value="History">History</option>
+                    {% endif %}
+
+            </select>
+        </div>
     {{ myFilter.form }}
     <div class ='buttons'>
         <button type ='submit' class="filter_btn">
             SEARCH
         </button>
-{#        <button type ='submit' class="settings_btn">#}
-{#            DOWNLOAD#}
-{#        </button>#}
 
     </div>
         </form>

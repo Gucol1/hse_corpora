@@ -23,6 +23,7 @@ url = 'C:/Users/Admin/HSE_CORPORA/main/static/PECLAP'
 wordlists_all = PlaintextCorpusReader(url, '.*', encoding='cp1251') # Все дисциплины
 words_all = wordlists_all.words(fileids=wordlists_all.fileids()) # Все слова
 raw_text_all = wordlists_all.raw() # Весь текст
+discipline = 'All'
 
 #БИ_ПИ
 wordlists_BI = PlaintextCorpusReader(url, 'BI.*', encoding='cp1251') # БИ_ПИ
@@ -142,11 +143,12 @@ def peclap_info(request):
     return render(request, 'peclap_info.html', context={'tokens': tokens_all_len,
                                                         'tokens_dict': tokens_dict})
 
+
+
 def peclap_word(response):
     current_info = Main.objects.all()
-    discipline = 'All'
-    if response.method == "POST":
-        discipline = response.POST.get('disciplines')
+    if response.method == "GET":
+        discipline = response.GET.get('disciplines')
         if discipline == 'Computer Science':
             current_info = BI_PE.objects.all()
         elif discipline == 'Economics':
@@ -159,21 +161,12 @@ def peclap_word(response):
             current_info = LAW.objects.all()
         elif discipline == 'Political Science':
             current_info = POLIT.objects.all()
-        else:
-            discipline = 'All'
-            current_info = Main.objects.all()
-
-
+    else:
+        discipline = 'All'
+    print(discipline)
     words = current_info
     myFilter = WordFilter(response.GET, queryset=words)
-
     words = myFilter.qs
-
-    context = {
-        'words': words,
-        'myFilter': myFilter,
-    }
-
     results = len(words)
 
     return render(response, 'peclap_word.html', context={'current_info': current_info,'results':results,

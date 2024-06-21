@@ -5,11 +5,13 @@ from django.shortcuts import render
 from textblob import TextBlob
 from collections import Counter
 from .functions import fill_peclap_info
-from .models import Main
+from .models import Main, BI_PE, LAW, POLIT, M, E, HIST
 import nltk
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import gutenberg, PlaintextCorpusReader
 from nltk.text import Text
+import django_filters
+from .filters import WordFilter
 # nltk.download('wordnet')
 # nltk.download('punkt')
 # nltk.download('gutenberg')
@@ -77,52 +79,56 @@ tokens_all_len = len(tokens_all)
 
 #Пропорция для подсчёта нормализованного интервала и частотности
 proportion = 1000000/tokens_all_len
+proportion_BI = 1000000/len(tokens_BI)
+proportion_M = 1000000/len(tokens_M)
+proportion_E = 1000000/len(tokens_E)
+proportion_HIST = 1000000/len(tokens_HIST)
+proportion_POLIT = 1000000/len(tokens_POLIT)
+proportion_LAW = 1000000/len(tokens_LAW)
 
 # Main.objects.all().delete()
 
 def home(request):
-    current_info = Main.objects.all()
-    frequency_list = Counter(tokens_all) # Частоты слов
-    # print(frequency_list)
-    info_info = []
-    words = tokens_all
-    current_info = frequency_list
-    number, rank, count, frequency = 1, 1, 0, 0
-    sorted_frequency = sorted(frequency_list.items(), key=lambda item: item[1], reverse=True)
-
-    # print(sorted_frequency) # Частоты
-    # print(wordlists_all.fileids()) # Названия всех файлов
+    # frequency_list = Counter(tokens_LAW) # Частоты слов ТУТ МЕНЯТЬ
+    # # print(frequency_list)
+    # current_info = frequency_list
+    # number, rank, count, frequency = 1, 1, 0, 0
+    # sorted_frequency = sorted(frequency_list.items(), key=lambda item: item[1], reverse=True)
+    #
+    # # print(sorted_frequency) # Частоты
+    # # print(wordlists_all.fileids()) # Названия всех файлов
     #
     # for elem in sorted_frequency:
-    #     prev = frequency
-    #     word = elem[0]
-    #     frequency = elem[1]
-    #     for filename in wordlists_all.fileids():
-    #         file = open(os.path.join(url, filename), 'r', encoding='cp1251')
-    #         text = file.read().lower()
-    #         # print(tokens)
-    #         if word in text:
-    #             count += 1
-    #             continue
-    #
-    #     # print(word, count)
-    #
-    #     if prev == frequency:
-    #         rank = rank
-    #     else:
-    #         rank = number
-    #     number += 1
-    #
-    #     if count>int(frequency):
-    #         count = frequency
-    #
-    #     word_obj = Main.objects.create(word = word, rank = rank, frequency = frequency, range = count,
-    #                                    normalized_freq=proportion*int(frequency),normalized_range=proportion*int(count))
-    #     word_obj.save()
-    #
-    #     count = 0
+        # prev = frequency
+        # word = elem[0]
+        # frequency = elem[1]
+        # for filename in wordlists_LAW.fileids(): # ТУТ МЕНЯТЬ
+        #     file = open(os.path.join(url, filename), 'r', encoding='cp1251')
+        #     text = file.read().lower()
+        #     # print(tokens)
+        #     if word in text:
+        #         count += 1
+        #         continue
+        #
+        # # print(word, count)
+        #
+        # if prev == frequency:
+        #     rank = rank
+        # else:
+        #     rank = number
+        # number += 1
+        #
+        # if count>int(frequency):
+        #     count = frequency
+        #
+        # word_obj = LAW.objects.create(word = word, rank = rank, frequency = frequency, range = count, # ТУТ МЕНЯТЬ
+        #                                normalized_freq=(proportion_LAW*float(frequency)).__round__(2), # ТУТ МЕНЯТЬ
+        #                                 normalized_range=(float(count)/len(wordlists_LAW.fileids())).__round__(2)) # ТУТ МЕНЯТЬ
+        # word_obj.save()
+        #
+        # count = 0
 
-    return render(request, 'home.html', context={'current_info': current_info})
+    return render(request, 'home.html')
 
 def peclap(request): # Concordance
     text = Text(list(raw_text_all.split(' ')))
@@ -136,6 +142,39 @@ def peclap_info(request):
     return render(request, 'peclap_info.html', context={'tokens': tokens_all_len,
                                                         'tokens_dict': tokens_dict})
 
-def peclap_word(request):
+def peclap_word(response):
     current_info = Main.objects.all()
-    return render(request, 'peclap_word.html', context={'current_info': current_info})
+    discipline = 'All'
+    if response.method == "POST":
+        discipline = response.POST.get('disciplines')
+        if discipline == 'Computer Science':
+            current_info = BI_PE.objects.all()
+        elif discipline == 'Economics':
+            current_info = E.objects.all()
+        elif discipline == 'Management':
+            current_info = M.objects.all()
+        elif discipline == 'History':
+            current_info = HIST.objects.all()
+        elif discipline == 'Law':
+            current_info = LAW.objects.all()
+        elif discipline == 'Political Science':
+            current_info = POLIT.objects.all()
+        else:
+            discipline = 'All'
+            current_info = Main.objects.all()
+
+
+    words = current_info
+    myFilter = WordFilter(response.GET, queryset=words)
+
+    words = myFilter.qs
+
+    context = {
+        'words': words,
+        'myFilter': myFilter,
+    }
+
+    results = len(words)
+
+    return render(response, 'peclap_word.html', context={'current_info': current_info,'results':results,
+                                                         'discipline':discipline, 'words':words, 'myFilter': myFilter })

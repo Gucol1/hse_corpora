@@ -7,8 +7,74 @@ class Main(models.Model):
     rank = models.IntegerField()
     frequency = models.IntegerField()
     range = models.IntegerField()
-    normalized_freq = models.IntegerField()
-    normalized_range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+
+    def __str__(self):
+        return self.word
+
+class BI_PE(models.Model):
+    word = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+
+    def __str__(self):
+        return self.word
+
+class LAW(models.Model):
+    word = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+
+    def __str__(self):
+        return self.word
+
+class POLIT(models.Model):
+    word = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+
+    def __str__(self):
+        return self.word
+
+class M(models.Model):
+    word = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+
+    def __str__(self):
+        return self.word
+
+class E(models.Model):
+    word = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+
+    def __str__(self):
+        return self.word
+
+class HIST(models.Model):
+    word = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
 
     def __str__(self):
         return self.word

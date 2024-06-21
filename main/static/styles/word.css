@@ -134,3 +134,72 @@ table{
     color:#102D69;
     font-weight: bold;
 }
+
+form button, form select{
+    font-family: "HSE Sans", sans-serif;
+    color: #102D69;
+    font-size: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.filter_btn{
+    transition: 0.5s ease;
+    border: 0;
+    padding: 5px 10px 5px 10px;
+}
+
+.filter_btn:hover{
+    color: white;
+    background-color: #102D69;
+    transition: 0.5s ease;
+    cursor: pointer;
+    border: 1px white solid;
+}
+
+#id_normalized_freq_1, #id_normalized_range_1{
+    display: none;
+}
+
+.settings form, .settings form fieldset legend{
+    border: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.settings form{
+    display: flex;
+    width: 100%;
+}
+
+.settings form div{
+    flex-flow: column;
+    margin: 10px 40px 10px 0;
+    user-select: none;
+    display: flex;
+    flex-flow: column;
+}
+
+.settings form div:last-child{
+    justify-content: center;
+    padding-bottom: 15px;;
+}
+
+
+.settings form fieldset{
+    color: #102D69;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+}
+
+.settings form input{
+    border-radius: 25px;
+    font-family: "HSE Sans", sans-serif;
+    color: #102D69;
+    font-size: 15px;
+    font-weight: bold;
+}

@@ -36,26 +36,49 @@
 
 <div class="info_block">
 <div class="filters">
-    <p><b>Filters</b></p>
-    <p><b>Discipline:</b></p>
+        <p><b>Filters</b></p>
+        <p><b>Discipline:</b></p>
+            <form method="post">
+             {% csrf_token %}
+                    <select name="disciplines" id="select1">
+                        <option value="default">{{ discipline }}</option>
+                        <option value="All">All</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Law">Law</option>
+                        <option value="Political Science">Political Science</option>
+                        <option value="Management">Management</option>
+                        <option value="Economics">Economics</option>
+                        <option value="History">History</option>
+                    </select>
+                <button type="submit" value="Discipline" class="filter_btn">APPLY</button>
+            </form>
 </div>
+
+<script type="text/javascript">
+
+    </script>
+
 
 <div class="settings">
     <p><b>Settings</b></p>
-    <p><b>Min. Freq: ---- Min. Range: ---- Lemmatized: ----</b></p>
-    <p><b>Word: ----</b></p>
+    <form>
+        {% csrf_token %}
+
+    {{ myFilter.form }}
     <div class ='buttons'>
-        <div class="settings_btn">
+        <button type ='submit' class="filter_btn">
             SEARCH
-        </div>
-        <div class="settings_btn">
-            DOWNLOAD
-        </div>
+        </button>
+{#        <button type ='submit' class="settings_btn">#}
+{#            DOWNLOAD#}
+{#        </button>#}
+
     </div>
+        </form>
 </div>
 
 <div class="results">
-<p><b>Results:</b></p>
+<p><b>Results: {{ results }} words</b></p>
 
 
     <table class="tcont countLines">
@@ -68,7 +91,7 @@
     <th>Norm. Freq.</th>
     <th>Norm. Range</th>
 </tr>
-    {% for item in current_info %}
+    {% for item in words %}
                 <tr>
                     <td></td>
                     <th>{{ item.word }}</th>

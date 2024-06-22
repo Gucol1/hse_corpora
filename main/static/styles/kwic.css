@@ -16,17 +16,6 @@ html{
     font-size: 25px;
 }
 
-.filters p, .settings p, .results p{
-    padding: 10px 10px 10px 0;
-    color: white;
-    margin: 0;
-}
-
-.filters p:first-child, .settings p:first-child{
-    border-bottom: 1px white solid;
-}
-
-
 .buttons{
     display: flex;
     color: #102D69;
@@ -35,7 +24,7 @@ html{
 .settings_btn{
     background-color: white;
     padding: 3px 15px 3px 15px;
-    margin: 10px 30px 10px 0;
+    margin: 10px 10px 10px 0;
     border-radius: 20px;
     font-weight: bold;
 }
@@ -134,7 +123,6 @@ form button, form select{
 
 .settings form div:last-child{
     justify-content: center;
-    padding-bottom: 15px;;
 }
 
 
@@ -154,4 +142,15 @@ form button, form select{
     color: #102D69;
     font-size: 20px;
     font-weight: bold;
+}
+
+.settings p{
+    color:white;
+    border-bottom: 1px solid white;
+    margin: 0;
+    padding: 10px 10px 10px 0;
+}
+
+form div:nth-child(3){
+    width: 100%;
 }

@@ -4,7 +4,7 @@ import textblob
 from django.shortcuts import render
 from textblob import TextBlob
 from collections import Counter
-from .functions import fill_peclap_info
+from .functions import get_discipline
 from .models import Main, BI_PE, LAW, POLIT, M, E, HIST
 import nltk
 from nltk.tokenize import RegexpTokenizer
@@ -78,96 +78,55 @@ tokens_dict['F'] = {'Name':'History','Files':43,'Tokens':len(tokens_HIST)}
 #Количество токенов
 tokens_all_len = len(tokens_all)
 
-#Пропорция для подсчёта нормализованного интервала и частотности
-proportion = 1000000/tokens_all_len
-proportion_BI = 1000000/len(tokens_BI)
-proportion_M = 1000000/len(tokens_M)
-proportion_E = 1000000/len(tokens_E)
-proportion_HIST = 1000000/len(tokens_HIST)
-proportion_POLIT = 1000000/len(tokens_POLIT)
-proportion_LAW = 1000000/len(tokens_LAW)
+# Словарь с информацией о текстах
+raw_texts = dict()
+raw_texts['All'] = raw_text_all
+raw_texts['Computer Science'] = raw_text_BI
+raw_texts['Law'] = raw_text_LAW
+raw_texts['Political Science'] = raw_text_POLIT
+raw_texts['Management'] = raw_text_M
+raw_texts['Economics'] = raw_text_E
+raw_texts['History'] = raw_text_HIST
 
 # Main.objects.all().delete()
 
 def home(request):
-    # frequency_list = Counter(tokens_LAW) # Частоты слов ТУТ МЕНЯТЬ
-    # # print(frequency_list)
-    # current_info = frequency_list
-    # number, rank, count, frequency = 1, 1, 0, 0
-    # sorted_frequency = sorted(frequency_list.items(), key=lambda item: item[1], reverse=True)
-    #
-    # # print(sorted_frequency) # Частоты
-    # # print(wordlists_all.fileids()) # Названия всех файлов
-    #
-    # for elem in sorted_frequency:
-        # prev = frequency
-        # word = elem[0]
-        # frequency = elem[1]
-        # for filename in wordlists_LAW.fileids(): # ТУТ МЕНЯТЬ
-        #     file = open(os.path.join(url, filename), 'r', encoding='cp1251')
-        #     text = file.read().lower()
-        #     # print(tokens)
-        #     if word in text:
-        #         count += 1
-        #         continue
-        #
-        # # print(word, count)
-        #
-        # if prev == frequency:
-        #     rank = rank
-        # else:
-        #     rank = number
-        # number += 1
-        #
-        # if count>int(frequency):
-        #     count = frequency
-        #
-        # word_obj = LAW.objects.create(word = word, rank = rank, frequency = frequency, range = count, # ТУТ МЕНЯТЬ
-        #                                normalized_freq=(proportion_LAW*float(frequency)).__round__(2), # ТУТ МЕНЯТЬ
-        #                                 normalized_range=(float(count)/len(wordlists_LAW.fileids())).__round__(2)) # ТУТ МЕНЯТЬ
-        # word_obj.save()
-        #
-        # count = 0
-
     return render(request, 'home.html')
 
-def peclap(request): # Concordance
-    text = Text(list(raw_text_all.split(' ')))
-    query_word = 'puppets' # Слово для поиска конкорданса
-    current_info = text.concordance_list(query_word, lines=100000)
-    concordances_length = len(current_info) # Количество контекстов
-    return render(request, 'peclap.html', context={'current_info': current_info,
-                                                   'concordances_length':concordances_length})
+def peclap_kwic(response): # Concordance
+    if response.method == 'GET':
+        discipline = response.GET.get('disciplines')
+        if discipline is None:
+            discipline = 'All'
+        text = Text(list(raw_texts[discipline].split(' ')))
+        query_word = response.GET.get('word')  # Слово для поиска конкорданса
+        if query_word is None:
+            query_word = ''
+    else:
+        text = Text(list(raw_text_all.split(' ')))
+        query_word = ''
+        discipline = 'All'
+    query_word = list(query_word.split(' '))
+    concordances = text.concordance_list(query_word, lines=100000)
+    result = len(concordances)
+    query_word = ' '.join(query_word)
+    return render(response, 'peclap_kwic.html', context={'concordances': concordances, 'result': result,
+                                                         'discipline': discipline, 'query_word': query_word})
 
 def peclap_info(request):
     return render(request, 'peclap_info.html', context={'tokens': tokens_all_len,
                                                         'tokens_dict': tokens_dict})
 
 
-
 def peclap_word(response):
     current_info = Main.objects.all()
     if response.method == "GET":
         discipline = response.GET.get('disciplines')
-        if discipline == 'Computer Science':
-            current_info = BI_PE.objects.all()
-        elif discipline == 'Economics':
-            current_info = E.objects.all()
-        elif discipline == 'Management':
-            current_info = M.objects.all()
-        elif discipline == 'History':
-            current_info = HIST.objects.all()
-        elif discipline == 'Law':
-            current_info = LAW.objects.all()
-        elif discipline == 'Political Science':
-            current_info = POLIT.objects.all()
+        current_info = get_discipline(discipline)
     else:
         discipline = 'All'
-    print(discipline)
     words = current_info
     myFilter = WordFilter(response.GET, queryset=words)
     words = myFilter.qs
-    results = len(words)
-
-    return render(response, 'peclap_word.html', context={'current_info': current_info,'results':results,
-                                                         'discipline':discipline, 'words':words, 'myFilter': myFilter })
+    return render(response, 'peclap_word.html', context={'results':len(words),'discipline':discipline,
+                                                                        'words':words, 'myFilter': myFilter })

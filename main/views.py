@@ -80,13 +80,13 @@ tokens_all_len = len(tokens_all)
 
 # Словарь с информацией о текстах
 raw_texts = dict()
-raw_texts['All'] = raw_text_all
-raw_texts['Computer Science'] = raw_text_BI
-raw_texts['Law'] = raw_text_LAW
-raw_texts['Political Science'] = raw_text_POLIT
-raw_texts['Management'] = raw_text_M
-raw_texts['Economics'] = raw_text_E
-raw_texts['History'] = raw_text_HIST
+raw_texts['All'] = raw_text_all.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts['Computer Science'] = raw_text_BI.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts['Law'] = raw_text_LAW.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' "').replace(':',' : ').replace('-', ' - ')
+raw_texts['Political Science'] = raw_text_POLIT.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts['Management'] = raw_text_M.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts['Economics'] = raw_text_E.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts['History'] = raw_text_HIST.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
 
 # Main.objects.all().delete()
 
@@ -107,8 +107,9 @@ def peclap_kwic(response): # Concordance
         query_word = ''
         discipline = 'All'
     query_word = list(query_word.split(' '))
-    concordances = text.concordance_list(query_word, lines=100000)
+    concordances = text.concordance_list(query_word, lines=100000, )
     result = len(concordances)
+    print(result)
     query_word = ' '.join(query_word)
     return render(response, 'peclap_kwic.html', context={'concordances': concordances, 'result': result,
                                                          'discipline': discipline, 'query_word': query_word})

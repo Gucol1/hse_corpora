@@ -5,11 +5,13 @@ from django.shortcuts import render
 from textblob import TextBlob
 from collections import Counter
 from .functions import get_discipline
-from .models import Main, BI_PE, LAW, POLIT, M, E, HIST
+from main.models import (Main, BI_PE, LAW, POLIT, M, E, HIST, Main_ngram, BI_PE_ngram, LAW_ngram, POLIT_ngram,
+                         M_ngram, E_ngram, HIST_ngram)
 import nltk
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import gutenberg, PlaintextCorpusReader
 from nltk.text import Text
+from nltk import ngrams
 import django_filters
 from .filters import WordFilter
 # nltk.download('wordnet')
@@ -89,6 +91,7 @@ raw_texts['Economics'] = raw_text_E.replace(',',' ,').replace('.',' .').replace(
 raw_texts['History'] = raw_text_HIST.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
 
 # Main.objects.all().delete()
+# Main_ngram.objects.all().delete()
 
 def home(request):
     return render(request, 'home.html')
@@ -130,4 +133,18 @@ def peclap_word(response):
     myFilter = WordFilter(response.GET, queryset=words)
     words = myFilter.qs
     return render(response, 'peclap_word.html', context={'results':len(words),'discipline':discipline,
+                                                                        'words':words, 'myFilter': myFilter })
+
+def peclap_ngram(response):
+    current_info = Main.objects.all()
+    if response.method == "GET":
+        discipline = response.GET.get('disciplines')
+        current_info = get_discipline(discipline)
+    else:
+        discipline = 'All'
+    words = current_info
+    myFilter = WordFilter(response.GET, queryset=words)
+    words = myFilter.qs
+
+    return render(response, 'peclap_ngram.html', context={'results':len(words),'discipline':discipline,
                                                                         'words':words, 'myFilter': myFilter })

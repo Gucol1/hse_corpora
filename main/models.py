@@ -78,3 +78,86 @@ class HIST(models.Model):
 
     def __str__(self):
         return self.word
+
+class Main_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+    def __str__(self):
+        return self.text
+
+class BI_PE_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+class LAW_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+class POLIT_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+class M_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+class E_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+class HIST_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text

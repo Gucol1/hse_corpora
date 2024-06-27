@@ -66,3 +66,78 @@ def get_discipline(discipline):
 # proportion_HIST = 1000000/len(tokens_HIST)
 # proportion_POLIT = 1000000/len(tokens_POLIT)
 # proportion_LAW = 1000000/len(tokens_LAW)
+
+
+# n-грамы
+
+    # n = 6 # ТУТ МЕНЯТЬ
+    # n_grams = ngrams(raw_text_POLIT.split(), n) # ТУТ МЕНЯТЬ
+    # new_n_grams = []
+    # for grams in n_grams:
+    #     if (('.' or ',' or '?' or '!' or ':' or ';' or '-' or '' not in grams[0]) and
+    #     ('.' or ',' or '?' or '!' or ':' or ';' or '-' or '' not in grams[1])
+    #     and ('.' or ',' or '?' or '!' or ':' or ';' or '-' or '' not in grams[2])
+    #     and ('.' or ',' or '?' or '!' or ':' or ';' or '-' or '' not in grams[3])
+    #     and ('.' or ',' or '?' or '!' or ':' or ';' or '-' or '' not in grams[4])):
+    #         grams = list(grams)
+    #         raw = " ".join(grams)
+    #         grams[0] = (grams[0].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!','')
+    #                     .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         grams[1] = (grams[1].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!','')
+    #                     .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         grams[2] = (grams[2].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!','')
+    #                     .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         grams[3] = (grams[3].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!','')
+    #                     .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         grams[4] = (grams[4].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!','')
+    #                     .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         grams[5] = (grams[5].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!', '')
+    #                     .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         grams = ' '.join(grams)
+    #         grams = grams.lower()
+    #         new_n_grams.append(grams)
+    #         # print(grams)
+    #
+    # frequency_list = Counter(new_n_grams)
+    # current_info = frequency_list
+    # number, rank, count, frequency = 1, 1, 0, 0
+    # sorted_frequency = sorted(frequency_list.items(), key=lambda item: item[1], reverse=True)
+    #
+    #
+    # ngram_proportion = 1000000/len(tokens_POLIT) # Тут менять
+    #
+    # for elem in sorted_frequency:
+    #     prev = frequency
+    #     word = elem[0]
+    #     # print(word)
+    #     frequency = elem[1]
+    #     for filename in wordlists_POLIT.fileids(): # ТУТ МЕНЯТЬ
+    #         file = open(os.path.join(url, filename), 'r', encoding='cp1251')
+    #         text = file.read().lower().replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!',
+    #                                                                                                       '').replace(
+    #             '(', '').replace(')', '').replace('"', '').replace(':', '').replace(
+    #             '-', '')
+    #         # print(tokens)
+    #         if word in text:
+    #             count += 1
+    #             continue
+    #
+    #     # print(word, count)
+    #
+    #     if prev == frequency:
+    #         rank = rank
+    #     else:
+    #         rank = number
+    #     number += 1
+    #
+    #     if count>int(frequency):
+    #         count = frequency
+    #
+    #     word_obj = POLIT_ngram.objects.create(text = word, rank = rank, frequency = frequency, range = count, # ТУТ МЕНЯТЬ
+    #                                    normalized_freq=(ngram_proportion*float(frequency)).__round__(2), # ТУТ МЕНЯТЬ
+    #                                     normalized_range=(float(count)/len(wordlists_POLIT.fileids())).__round__(2), # ТУТ МЕНЯТЬ
+    #                                          ngram=n)
+    #     word_obj.save()
+    #
+    #
+    #     count = 0

@@ -1,0 +1,173 @@
+body{
+    background-color: #102D69;
+    margin: 0;
+}
+
+html{
+    height: 100%;
+}
+
+
+.info_block{
+    margin: 20px;
+    border-radius: 25px;
+    /*padding: 5px 20px 5px 20px;*/
+    font-family: "HSE Sans", sans-serif;
+    font-size: 25px;
+}
+
+.filters p, .settings p, .results p{
+    padding: 10px 10px 10px 0;
+    color: white;
+    margin: 0;
+}
+
+.filters p:first-child, .settings p:first-child{
+    border-bottom: 1px white solid;
+}
+
+
+.buttons{
+    display: flex;
+    color: #102D69;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings_btn{
+    background-color: white;
+    padding: 3px 15px 3px 15px;
+    margin: 10px 30px 10px 0;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+table, th, tr, td{
+    padding: 5px;
+}
+
+td{
+    text-align: center;
+}
+
+td,th{
+    border-right: 1px solid #102D69;
+    padding: 2px 20px 2px 20px;
+    border-bottom: 1px solid #102D69;
+}
+
+td:last-child, th:last-child{
+    border-right: 0;
+}
+
+
+table{
+    border-spacing: 0;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 17px;
+}
+
+.results{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-flow:column;
+    color: #102D69;
+}
+
+.countLines {
+    counter-reset: trCount;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.countLines tr td:first-child:before {
+    position:relative;
+    counter-increment: trCount;
+    content:counter(trCount);
+    color:#102D69;
+    font-weight: bold;
+}
+
+form button, form select{
+    font-family: "HSE Sans", sans-serif;
+    color: #102D69;
+    font-size: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.filter_btn{
+    transition: 0.5s ease;
+    border: 0;
+    padding: 5px 10px 5px 10px;
+}
+
+.filter_btn:hover{
+    color: white;
+    background-color: #102D69;
+    transition: 0.5s ease;
+    cursor: pointer;
+    border: 1px white solid;
+}
+
+#id_normalized_freq_1, #id_normalized_range_1{
+    display: none;
+}
+
+.settings form, .settings form fieldset legend{
+    border: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.settings form{
+    display: flex;
+    width: 100%;
+}
+
+.settings form div{
+    margin: 10px 40px 0px 0;
+    user-select: none;
+}
+
+
+
+.settings form fieldset{
+    color: #102D69;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+}
+
+.settings form input{
+    border-radius: 25px;
+    font-family: "HSE Sans", sans-serif;
+    color: #102D69;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.inputs{
+    display: flex;
+    flex-flow: row;
+    width: 150%;
+}
+
+.inputs select{
+    margin-right: 30px;
+}
+
+.inputs div{
+    display: flex;
+    flex-flow: column;
+}
+
+.inputs #id_word{
+    width:100%;
+    margin-right: 250px;
+}

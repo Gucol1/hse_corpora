@@ -1,4 +1,5 @@
-from .models import Main, BI_PE, E, M, HIST, LAW, POLIT
+from main.models import (Main, BI_PE, LAW, POLIT, M, E, HIST, Main_ngram, BI_PE_ngram, LAW_ngram, POLIT_ngram,
+                         M_ngram, E_ngram, HIST_ngram)
 
 def get_discipline(discipline):
     if discipline == 'Computer Science':
@@ -17,6 +18,22 @@ def get_discipline(discipline):
         current_info = Main.objects.all()
     return current_info
 
+def get_discipline_ngram(discipline, ngrams):
+    if discipline == 'Computer Science':
+        current_info = BI_PE_ngram.objects.all().filter(ngram=ngrams)
+    elif discipline == 'Economics':
+        current_info = E_ngram.objects.all().filter(ngram=ngrams)
+    elif discipline == 'Management':
+        current_info = M_ngram.objects.all().filter(ngram=ngrams)
+    elif discipline == 'History':
+        current_info = HIST_ngram.objects.all().filter(ngram=ngrams)
+    elif discipline == 'Law':
+        current_info = LAW_ngram.objects.all().filter(ngram=ngrams)
+    elif discipline == 'Political Science':
+        current_info = POLIT_ngram.objects.all().filter(ngram=ngrams)
+    else:
+        current_info = Main_ngram.objects.all().filter(ngram=ngrams)
+    return current_info
 
 
     # frequency_list = Counter(tokens_LAW) # Частоты слов ТУТ МЕНЯТЬ

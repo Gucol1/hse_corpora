@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>HSE CORPORA</title>
     {% block head %}
-    <link rel="stylesheet" href= "{% static '/styles/word.css' %}">
+    <link rel="stylesheet" href= "{% static '/styles/ngram.css' %}">
     {% endblock %}
 </head>
 
@@ -39,7 +39,8 @@
     <p><b>Settings</b></p>
     <form method="get">
         {% csrf_token %}
-        <div>
+    <div class="mega_inputs">
+        <div class="inputs">
         <legend>Disciplines:</legend>
                 <select name="disciplines" id="select1">
                     {% if discipline == 'All'%}
@@ -85,19 +86,51 @@
                     {% endif %}
 
             </select>
+
+                    <legend>N-gram size:</legend>
+                <select name="n_gram_size" id="select2">
+                    {% if size == '3'%}
+                <option value="3" selected>3</option>
+                        {% else %}
+                        <option value="3">3</option>
+                    {% endif %}
+
+                    {% if size == '4'%}
+                        <option value="4" selected>4</option>
+                    {% else %}
+                        <option value="4">4</option>
+                    {% endif %}
+
+                    {% if size == '5'%}
+                        <option value="5" selected>5</option>
+                    {% else %}
+                        <option value="5">5</option>
+                    {% endif %}
+
+                    {% if size == '6'%}
+                        <option value="6" selected>6</option>
+                    {% else %}
+                        <option value="6">6</option>
+                    {% endif %}
+
+            </select>
         </div>
+        <div class="inputs">
     {{ myFilter.form }}
+
     <div class ='buttons'>
         <button type ='submit' class="filter_btn">
             SEARCH
         </button>
 
     </div>
+        </div>
+    </div>
         </form>
 </div>
 
 <div class="results">
-<p><b>Results: {{ results }} words</b></p>
+<p><b>Results: {{ results }}</b></p>
 
 
     <table class="tcont countLines">
@@ -113,7 +146,7 @@
     {% for item in words %}
                 <tr>
                     <td></td>
-                    <th>{{ item.word }}</th>
+                    <th>{{ item.text }}</th>
                     <td>{{ item.rank }}</td>
                     <td>{{ item.frequency }}</td>
                     <td>{{ item.range }}</td>

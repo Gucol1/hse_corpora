@@ -4,7 +4,7 @@ import textblob
 from django.shortcuts import render
 from textblob import TextBlob
 from collections import Counter
-from .functions import get_discipline
+from .functions import get_discipline, get_discipline_ngram
 from main.models import (Main, BI_PE, LAW, POLIT, M, E, HIST, Main_ngram, BI_PE_ngram, LAW_ngram, POLIT_ngram,
                          M_ngram, E_ngram, HIST_ngram)
 import nltk
@@ -13,7 +13,7 @@ from nltk.corpus import gutenberg, PlaintextCorpusReader
 from nltk.text import Text
 from nltk import ngrams
 import django_filters
-from .filters import WordFilter
+from .filters import WordFilter, NgramFilter
 # nltk.download('wordnet')
 # nltk.download('punkt')
 # nltk.download('gutenberg')
@@ -93,6 +93,7 @@ raw_texts['History'] = raw_text_HIST.replace(',',' ,').replace('.',' .').replace
 # Main.objects.all().delete()
 # Main_ngram.objects.all().delete()
 
+
 def home(request):
     return render(request, 'home.html')
 
@@ -136,15 +137,20 @@ def peclap_word(response):
                                                                         'words':words, 'myFilter': myFilter })
 
 def peclap_ngram(response):
-    current_info = Main.objects.all()
+    current_info = Main_ngram.objects.filter(ngram=3)
+    ngrams = 3
     if response.method == "GET":
         discipline = response.GET.get('disciplines')
-        current_info = get_discipline(discipline)
+        ngrams = response.GET.get('n_gram_size')
+        if ngrams is None:
+            ngrams = 3
+        current_info = get_discipline_ngram(discipline, int(ngrams))
     else:
         discipline = 'All'
+        ngrams = 3
     words = current_info
-    myFilter = WordFilter(response.GET, queryset=words)
+    myFilter = NgramFilter(response.GET, queryset=words)
     words = myFilter.qs
 
     return render(response, 'peclap_ngram.html', context={'results':len(words),'discipline':discipline,
-                                                                        'words':words, 'myFilter': myFilter })
+                                                                        'words':words, 'myFilter': myFilter, 'size': ngrams })

@@ -8,8 +8,8 @@ class WordFilter(django_filters.FilterSet):
     word = filters.CharFilter(lookup_expr="icontains", label="Word:")
 
 class NgramFilter(django_filters.FilterSet):
-    normalized_freq = filters.RangeFilter(label = "Min. normalized frequency:")
-    normalized_range = filters.RangeFilter(label = "Min. normalized range:")
+    frequency = filters.RangeFilter(label = "Min. raw frequency:")
+    range = filters.RangeFilter(label = "Min. raw range:")
     text = filters.CharFilter(lookup_expr="icontains", label="Word/Words:")
 
 

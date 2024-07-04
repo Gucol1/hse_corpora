@@ -112,7 +112,7 @@ form button, form select{
     border: 1px white solid;
 }
 
-#id_normalized_freq_1, #id_normalized_range_1{
+#id_frequency_1, #id_range_1{
     display: none;
 }
 

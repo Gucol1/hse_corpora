@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HSE CORPORA</title>
+    {% block head %}
+    <link rel="stylesheet" href= "{% static '/styles/word.css' %}">
+    {% endblock %}
+</head>
+
+<body>
+{% block corpora %}
+        <div class="corpora">
+        <div class="corpora_btn"><p><a class="corpora_btn" href="/peclap_info">PECLAP</a></p></div>
+        <div class="corpora_btn"><p class="separator">|</p></div>
+        <div class="corpora_btn_sel"><p><a class="corpora_btn" href="/pecase_info">PECASE</a></p></div>
+    </div>
+{% endblock %}
+
+{% block navbar %}
+            <div class="corpora">
+        <div class="corpora_btn"><p><a class="corpora_btn" href="/pecase_info">INFO</a></p></div>
+        <div class="corpora_btn"><p class="separator">|</p></div>
+                <div class="corpora_btn_sel"><p><a class="corpora_btn" href="/pecase_word">WORD</a></p></div>
+        <div class="corpora_btn"><p class="separator">|</p></div>
+                <div class="corpora_btn"><p><a class="corpora_btn" href="/pecase_kwic">KWIC</a></p></div>
+        <div class="corpora_btn"><p class="separator">|</p></div>
+                <div class="corpora_btn"><p><a class="corpora_btn" href="/pecase_ngram">N-GRAM</a></p></div>
+    </div>
+{% endblock navbar %}
+
+
+{% block content %}
+
+<div class="info_block">
+<div class="settings">
+    <p><b>Settings</b></p>
+    <form method="get">
+        {% csrf_token %}
+        <div>
+        <legend>Disciplines:</legend>
+                <select name="disciplines" id="select1">
+                    {% if discipline == 'All'%}
+                <option value="All" selected>All</option>
+                        {% else %}
+                        <option value="All">All</option>
+                    {% endif %}
+
+                    {% if discipline == 'Computer Science'%}
+                        <option value="Computer Science" selected>Computer Science</option>
+                    {% else %}
+                        <option value="Computer Science">Computer Science</option>
+                    {% endif %}
+
+                    {% if discipline == 'Law'%}
+                        <option value="Law" selected>Law</option>
+                    {% else %}
+                        <option value="Law">Law</option>
+                    {% endif %}
+
+                    {% if discipline == 'Political Science'%}
+                        <option value="Political Science" selected>Political Science</option>
+                    {% else %}
+                        <option value="Political Science">Political Science</option>
+                    {% endif %}
+
+                    {% if discipline == "Management"%}
+                        <option value="Management" selected>Management</option>
+                    {% else %}
+                        <option value="Management">Management</option>
+                    {% endif %}
+
+                    {% if discipline == "Economics"%}
+                        <option value="Economics" selected>Economics</option>
+                    {% else %}
+                        <option value="Economics">Economics</option>
+                    {% endif %}
+
+                    {% if discipline == "History"%}
+                        <option value="History" selected>History</option>
+                    {% else %}
+                        <option value="History">History</option>
+                    {% endif %}
+
+            </select>
+        </div>
+    {{ myFilter.form }}
+    <div class ='buttons'>
+        <button type ='submit' class="filter_btn">
+            SEARCH
+        </button>
+
+    </div>
+        </form>
+</div>
+
+<div class="results">
+<p><b>Results: {{ results }} words</b></p>
+
+
+    <table class="tcont countLines">
+<tr>
+    <th>№</th>
+    <th>Word</th>
+    <th>Rank</th>
+    <th>Raw Freq.</th>
+    <th>Raw Range</th>
+    <th>Norm. Freq.</th>
+    <th>Norm. Range</th>
+</tr>
+    {% for item in words %}
+                <tr>
+                    <td></td>
+                    <th>{{ item.word }}</th>
+                    <td>{{ item.rank }}</td>
+                    <td>{{ item.frequency }}</td>
+                    <td>{{ item.range }}</td>
+                    <td>{{ item.normalized_freq }}</td>
+                    <td>{{ item.normalized_range }}</td>
+                </tr>
+{% endfor %}
+</table>
+</div>
+
+
+</div>
+
+
+{% endblock %}
+</body>
+</html>

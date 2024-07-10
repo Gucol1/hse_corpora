@@ -1,19 +1,20 @@
-# import os
+import os
 # import nltk
 # import textblob
 from django.shortcuts import render
 # from textblob import TextBlob
-# from collections import Counter
-from .functions import get_discipline, get_discipline_ngram
+from collections import Counter
+from .functions import get_discipline, get_discipline_ngram, get_category
 from main.models import (Main, BI_PE, LAW, POLIT, M, E, HIST, Main_ngram, BI_PE_ngram, LAW_ngram, POLIT_ngram,
-                         M_ngram, E_ngram, HIST_ngram, Main_pecase, school_pecase, uni_pecase)
+                         M_ngram, E_ngram, HIST_ngram, Main_pecase, school_pecase, uni_pecase, uni_pecase_fem,
+                         uni_pecase_man, uni_pecase_mf, school_pecase_man, school_pecase_fem)
 # import nltk
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import gutenberg, PlaintextCorpusReader
 from nltk.text import Text
 # from nltk import ngrams
 # import django_filters
-from .filters import WordFilter, NgramFilter
+from .filters import WordFilter, NgramFilter, WordFilterPecase
 # nltk.download('wordnet')
 # nltk.download('punkt')
 # nltk.download('gutenberg')
@@ -24,6 +25,7 @@ wordlists_all = PlaintextCorpusReader(url, '.*', encoding='cp1251')  # Все д
 words_all = wordlists_all.words(fileids=wordlists_all.fileids())  # Все слова
 raw_text_all = wordlists_all.raw()  # Весь текст
 discipline = 'All'
+category_pecase = 'All'
 
 # Все полы pecase
 url_pecase = 'C:/Users/Admin/HSE_CORPORA/main/static/PECASE'
@@ -157,7 +159,7 @@ raw_texts['History'] = raw_text_HIST.replace(',',' ,').replace('.',' .').replace
 
 # Main.objects.all().delete()
 # Main_ngram.objects.all().delete()
-
+# Main_pecase.objects.all().delete()
 
 def home(request):
     return render(request, 'home.html')
@@ -250,17 +252,17 @@ def pecase_info(request):
 
 
 def pecase_word(response):
-    current_info = Main.objects.all()
+    current_info = Main_pecase.objects.all()
     if response.method == "GET":
-        discipline = response.GET.get('disciplines')
-        current_info = get_discipline(discipline)
+        category_pecase = response.GET.get('category')
+        current_info = get_category(category_pecase)
     else:
-        discipline = 'All'
+        category_pecase = 'All'
     words = current_info
-    myFilter = WordFilter(response.GET, queryset=words)
-    words = myFilter.qs
-    return render(response, 'pecase_word.html', context={'results':len(words),'discipline':discipline,
-                                                                        'words':words, 'myFilter': myFilter })
+    myFilter_pecase = WordFilterPecase(response.GET, queryset=words)
+    words = myFilter_pecase.qs
+    return render(response, 'pecase_word.html', context={'results': len(words), 'category': category_pecase,
+                                                                        'words': words, 'myFilter': myFilter_pecase})
 
 
 def pecase_ngram(response):

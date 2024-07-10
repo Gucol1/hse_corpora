@@ -1,6 +1,7 @@
 from django.contrib import admin
 from main.models import (Main, BI_PE, LAW, POLIT, M, E, HIST, Main_ngram, BI_PE_ngram, LAW_ngram, POLIT_ngram,
-                         M_ngram, E_ngram, HIST_ngram, Main_pecase, school_pecase, uni_pecase)
+                         M_ngram, E_ngram, HIST_ngram, Main_pecase, school_pecase, uni_pecase, uni_pecase_mf,
+                         uni_pecase_fem, uni_pecase_man, school_pecase_fem, school_pecase_man)
 # Register your models here.
 
 admin.site.register(Main),
@@ -20,3 +21,8 @@ admin.site.register(HIST_ngram),
 admin.site.register(Main_pecase),
 admin.site.register(school_pecase),
 admin.site.register(uni_pecase),
+admin.site.register(uni_pecase_man),
+admin.site.register(uni_pecase_fem),
+admin.site.register(uni_pecase_mf),
+admin.site.register(school_pecase_fem),
+admin.site.register(school_pecase_man)

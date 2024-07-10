@@ -1,5 +1,6 @@
 from main.models import (Main, BI_PE, LAW, POLIT, M, E, HIST, Main_ngram, BI_PE_ngram, LAW_ngram, POLIT_ngram,
-                         M_ngram, E_ngram, HIST_ngram)
+                         M_ngram, E_ngram, HIST_ngram, school_pecase_fem, school_pecase_man,school_pecase, uni_pecase,
+                         uni_pecase_fem, uni_pecase_man, uni_pecase_mf, Main_pecase)
 
 def get_discipline(discipline):
     if discipline == 'Computer Science':
@@ -17,6 +18,27 @@ def get_discipline(discipline):
     else:
         current_info = Main.objects.all()
     return current_info
+
+
+def get_category(category):
+    if category == 'School/College Students':
+        current_info = school_pecase.objects.all()
+    elif category == 'School/College Females':
+        current_info = school_pecase_fem.objects.all()
+    elif category == 'School/College Males':
+        current_info = school_pecase_man.objects.all()
+    elif category == 'Undergraduate Students':
+        current_info = uni_pecase.objects.all()
+    elif category == 'Undergraduate Females':
+        current_info = uni_pecase_fem.objects.all()
+    elif category == 'Undergraduate Males':
+        current_info = uni_pecase_man.objects.all()
+    elif category == 'Undergraduate Males&Females':
+        current_info = uni_pecase_mf.objects.all()
+    else:
+        current_info = Main_pecase.objects.all()
+    return current_info
+
 
 def get_discipline_ngram(discipline, ngrams):
     if discipline == 'Computer Science':

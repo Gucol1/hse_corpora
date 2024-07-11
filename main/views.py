@@ -157,6 +157,17 @@ raw_texts['Management'] = raw_text_M.replace(',',' ,').replace('.',' .').replace
 raw_texts['Economics'] = raw_text_E.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
 raw_texts['History'] = raw_text_HIST.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
 
+raw_texts_pecase = dict()
+
+raw_texts_pecase['All'] = raw_text_all_pecase.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts_pecase['School/College Students'] = raw_text_pecase_sch.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts_pecase['School/College Females'] = raw_text_pecase_sch_fem.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts_pecase['School/College Males'] = raw_text_pecase_sch_man.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts_pecase['Undergraduate Students'] = raw_text_pecase_uni.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts_pecase['Undergraduate Females'] = raw_text_pecase_uni_fem.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts_pecase['Undergraduate Males'] = raw_text_pecase_uni_man.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+raw_texts_pecase['Undergraduate Males&Females'] = raw_text_pecase_uni_mf.replace(',',' ,').replace('.',' .').replace(';',' ;').replace('?',' ?').replace('!',' !').replace('(',' ( ').replace(')',' )').replace("'"," '").replace('’',' ’').replace('"',' " ').replace(':',' : ').replace('-', ' - ')
+
 # Main.objects.all().delete()
 # Main_ngram.objects.all().delete()
 # Main_pecase.objects.all().delete()
@@ -226,24 +237,24 @@ def peclap_ngram(response):
 
 def pecase_kwic(response): # Concordance
     if response.method == 'GET':
-        discipline = response.GET.get('disciplines')
-        if discipline is None:
-            discipline = 'All'
-        text = Text(list(raw_texts[discipline].split(' ')))
+        category_pecase = response.GET.get('category')
+        if category_pecase is None:
+            category_pecase = 'All'
+        text = Text(list(raw_texts_pecase[category_pecase].split(' ')))
         query_word = response.GET.get('word')  # Слово для поиска конкорданса
         if query_word is None:
             query_word = ''
     else:
-        text = Text(list(raw_text_all.split(' ')))
+        text = Text(list(raw_text_all_pecase.split(' ')))
         query_word = ''
-        discipline = 'All'
+        category_pecase = 'All'
     query_word = list(query_word.split(' '))
     concordances = text.concordance_list(query_word, lines=100000, )
     result = len(concordances)
     print(result)
     query_word = ' '.join(query_word)
     return render(response, 'pecase_kwic.html', context={'concordances': concordances, 'result': result,
-                                                         'discipline': discipline, 'query_word': query_word})
+                                                         'category': category_pecase, 'query_word': query_word})
 
 
 def pecase_info(request):

@@ -41,48 +41,54 @@
         {% csrf_token %}
     <div class="mega_inputs">
         <div class="inputs">
-        <legend>Disciplines:</legend>
-                <select name="disciplines" id="select1">
-                    {% if discipline == 'All'%}
+        <legend>Category:</legend>
+                <select name="category" id="select1">
+                    {% if category == 'All'%}
                 <option value="All" selected>All</option>
                         {% else %}
                         <option value="All">All</option>
                     {% endif %}
 
-                    {% if discipline == 'Computer Science'%}
-                        <option value="Computer Science" selected>Computer Science</option>
+                    {% if category == 'School/College Students'%}
+                        <option value="School/College Students" selected>School/College Students</option>
                     {% else %}
-                        <option value="Computer Science">Computer Science</option>
+                        <option value="School/College Students">School/College Students</option>
                     {% endif %}
 
-                    {% if discipline == 'Law'%}
-                        <option value="Law" selected>Law</option>
+                    {% if category == 'School/College Females'%}
+                        <option value="School/College Females" selected>School/College Females</option>
                     {% else %}
-                        <option value="Law">Law</option>
+                        <option value="School/College Females">School/College Females</option>
                     {% endif %}
 
-                    {% if discipline == 'Political Science'%}
-                        <option value="Political Science" selected>Political Science</option>
+                    {% if category == 'School/College Males'%}
+                        <option value="School/College Males" selected>School/College Males</option>
                     {% else %}
-                        <option value="Political Science">Political Science</option>
+                        <option value="School/College Males">School/College Males</option>
                     {% endif %}
 
-                    {% if discipline == "Management"%}
-                        <option value="Management" selected>Management</option>
+                    {% if category == "Undergraduate Students"%}
+                        <option value="Undergraduate Students" selected>Undergraduate Students</option>
                     {% else %}
-                        <option value="Management">Management</option>
+                        <option value="Undergraduate Students">Undergraduate Students</option>
                     {% endif %}
 
-                    {% if discipline == "Economics"%}
-                        <option value="Economics" selected>Economics</option>
+                    {% if category == "Undergraduate Females"%}
+                        <option value="Undergraduate Females" selected>Undergraduate Females</option>
                     {% else %}
-                        <option value="Economics">Economics</option>
+                        <option value="Undergraduate Females">Undergraduate Females</option>
                     {% endif %}
 
-                    {% if discipline == "History"%}
-                        <option value="History" selected>History</option>
+                    {% if category == "Undergraduate Males"%}
+                        <option value="Undergraduate Males" selected>Undergraduate Males</option>
                     {% else %}
-                        <option value="History">History</option>
+                        <option value="Undergraduate Males">Undergraduate Males</option>
+                    {% endif %}
+
+                   {% if category == "Undergraduate Males&Females"%}
+                        <option value="Undergraduate Males&Females" selected>Undergraduate Males&Females</option>
+                    {% else %}
+                        <option value="Undergraduate Males&Females">Undergraduate Males&Females</option>
                     {% endif %}
 
             </select>

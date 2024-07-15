@@ -169,7 +169,6 @@ class Main_pecase(models.Model):
     range = models.IntegerField()
     normalized_freq = models.FloatField()
     normalized_range = models.FloatField()
-    sex = models.TextField()
 
     def __str__(self):
         return self.word
@@ -181,7 +180,6 @@ class school_pecase(models.Model):
     range = models.IntegerField()
     normalized_freq = models.FloatField()
     normalized_range = models.FloatField()
-    sex = models.TextField()
 
     def __str__(self):
         return self.word
@@ -193,7 +191,6 @@ class uni_pecase(models.Model):
     range = models.IntegerField()
     normalized_freq = models.FloatField()
     normalized_range = models.FloatField()
-    sex = models.TextField()
 
     def __str__(self):
         return self.word
@@ -205,10 +202,10 @@ class uni_pecase_fem(models.Model):
     range = models.IntegerField()
     normalized_freq = models.FloatField()
     normalized_range = models.FloatField()
-    sex = models.TextField()
 
     def __str__(self):
         return self.word
+
 
 class uni_pecase_man(models.Model):
     word = models.TextField(unique=True)
@@ -217,10 +214,10 @@ class uni_pecase_man(models.Model):
     range = models.IntegerField()
     normalized_freq = models.FloatField()
     normalized_range = models.FloatField()
-    sex = models.TextField()
 
     def __str__(self):
         return self.word
+
 
 class uni_pecase_mf(models.Model):
     word = models.TextField(unique=True)
@@ -229,10 +226,10 @@ class uni_pecase_mf(models.Model):
     range = models.IntegerField()
     normalized_freq = models.FloatField()
     normalized_range = models.FloatField()
-    sex = models.TextField()
 
     def __str__(self):
         return self.word
+
 
 class school_pecase_fem(models.Model):
     word = models.TextField(unique=True)
@@ -241,10 +238,10 @@ class school_pecase_fem(models.Model):
     range = models.IntegerField()
     normalized_freq = models.FloatField()
     normalized_range = models.FloatField()
-    sex = models.TextField()
 
     def __str__(self):
         return self.word
+
 
 class school_pecase_man(models.Model):
     word = models.TextField(unique=True)
@@ -253,7 +250,109 @@ class school_pecase_man(models.Model):
     range = models.IntegerField()
     normalized_freq = models.FloatField()
     normalized_range = models.FloatField()
-    sex = models.TextField()
 
     def __str__(self):
         return self.word
+
+
+class Main_pecase_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+
+class school_pecase_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+
+class uni_pecase_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+
+class uni_pecase_fem_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+
+class uni_pecase_man_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+
+class uni_pecase_mf_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+
+class school_pecase_fem_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text
+
+class school_pecase_man_ngram(models.Model):
+    text = models.TextField(unique=True)
+    rank = models.IntegerField()
+    frequency = models.IntegerField()
+    range = models.IntegerField()
+    normalized_freq = models.FloatField()
+    normalized_range = models.FloatField()
+    ngram = models.IntegerField()
+
+    def __str__(self):
+        return self.text

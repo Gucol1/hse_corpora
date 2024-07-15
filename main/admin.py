@@ -1,7 +1,9 @@
 from django.contrib import admin
 from main.models import (Main, BI_PE, LAW, POLIT, M, E, HIST, Main_ngram, BI_PE_ngram, LAW_ngram, POLIT_ngram,
                          M_ngram, E_ngram, HIST_ngram, Main_pecase, school_pecase, uni_pecase, uni_pecase_mf,
-                         uni_pecase_fem, uni_pecase_man, school_pecase_fem, school_pecase_man)
+                         uni_pecase_fem, uni_pecase_man, school_pecase_fem, school_pecase_man, uni_pecase_ngram,
+                         school_pecase_ngram,school_pecase_fem_ngram,uni_pecase_fem_ngram,school_pecase_man_ngram,
+                         uni_pecase_mf_ngram,uni_pecase_man_ngram, Main_pecase_ngram)
 # Register your models here.
 
 admin.site.register(Main),
@@ -18,6 +20,7 @@ admin.site.register(POLIT_ngram),
 admin.site.register(M_ngram),
 admin.site.register(E_ngram),
 admin.site.register(HIST_ngram),
+
 admin.site.register(Main_pecase),
 admin.site.register(school_pecase),
 admin.site.register(uni_pecase),
@@ -25,4 +28,13 @@ admin.site.register(uni_pecase_man),
 admin.site.register(uni_pecase_fem),
 admin.site.register(uni_pecase_mf),
 admin.site.register(school_pecase_fem),
-admin.site.register(school_pecase_man)
+admin.site.register(school_pecase_man),
+
+admin.site.register(Main_pecase_ngram),
+admin.site.register(school_pecase_ngram),
+admin.site.register(uni_pecase_ngram),
+admin.site.register(uni_pecase_man_ngram),
+admin.site.register(uni_pecase_fem_ngram),
+admin.site.register(uni_pecase_mf_ngram),
+admin.site.register(school_pecase_fem_ngram),
+admin.site.register(school_pecase_man_ngram),

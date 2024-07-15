@@ -4,15 +4,17 @@ import os
 from django.shortcuts import render
 # from textblob import TextBlob
 from collections import Counter
-from .functions import get_discipline, get_discipline_ngram, get_category
+from .functions import get_discipline, get_discipline_ngram, get_category, get_category_ngram
 from main.models import (Main, BI_PE, LAW, POLIT, M, E, HIST, Main_ngram, BI_PE_ngram, LAW_ngram, POLIT_ngram,
                          M_ngram, E_ngram, HIST_ngram, Main_pecase, school_pecase, uni_pecase, uni_pecase_fem,
-                         uni_pecase_man, uni_pecase_mf, school_pecase_man, school_pecase_fem)
+                         uni_pecase_man, uni_pecase_mf, school_pecase_man, school_pecase_fem, school_pecase_ngram,
+                         uni_pecase_mf_ngram, uni_pecase_ngram, uni_pecase_man_ngram, school_pecase_man_ngram,
+                         school_pecase_fem_ngram, uni_pecase_fem_ngram, Main_pecase_ngram)
 # import nltk
 from nltk.tokenize import RegexpTokenizer
 from nltk.corpus import gutenberg, PlaintextCorpusReader
 from nltk.text import Text
-# from nltk import ngrams
+from nltk import ngrams
 # import django_filters
 from .filters import WordFilter, NgramFilter, WordFilterPecase
 # nltk.download('wordnet')
@@ -172,7 +174,87 @@ raw_texts_pecase['Undergraduate Males&Females'] = raw_text_pecase_uni_mf.replace
 # Main_ngram.objects.all().delete()
 # Main_pecase.objects.all().delete()
 
+# (Main_pecase_ngram),\
+# (school_pecase_ngram), \
+# (uni_pecase_ngram), \
+# (uni_pecase_man_ngram), \
+# (uni_pecase_fem_ngram),
+# (uni_pecase_mf_ngram),
+# (school_pecase_fem_ngram),
+# (school_pecase_man_ngram),
+
+
+
 def home(request):
+    # n = 3 # ТУТ МЕНЯТЬ
+    # n_grams = ngrams(raw_text_pecase_uni_man.split(), n) # ТУТ МЕНЯТЬ
+    # new_n_grams = []
+    # for grams in n_grams:
+    #     if (('.' or ',' or '?' or '!' or ':' or ';' or '-' or '' not in grams[0]) and
+    #     ('.' or ',' or '?' or '!' or ':' or ';' or '-' or '' not in grams[1])):
+    #     # and ('.' or ',' or '?' or '!' or ':' or ';' or '-' or '' not in grams[2])
+    #     # and ('.' or ',' or '?' or '!' or ':' or ';' or '-' or '' not in grams[3])
+    #     # and ('.' or ',' or '?' or '!' or ':' or ';' or '-' or '' not in grams[4])):
+    #         grams = list(grams)
+    #         raw = " ".join(grams)
+    #         grams[0] = (grams[0].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!','')
+    #                     .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         grams[1] = (grams[1].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!','')
+    #                     .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         grams[2] = (grams[2].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!','')
+    #                     .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         # grams[3] = (grams[3].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!','')
+    #         #             .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         # grams[4] = (grams[4].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!','')
+    #         #             .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         # grams[5] = (grams[5].replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!', '')
+    #         #             .replace('(', '').replace(')', '').replace('"', '').replace(':', '').replace('-', ''))
+    #         grams = ' '.join(grams)
+    #         grams = grams.lower()
+    #         new_n_grams.append(grams)
+    #         # print(grams)
+    #
+    # frequency_list = Counter(new_n_grams)
+    # current_info = frequency_list
+    # number, rank, count, frequency = 1, 1, 0, 0
+    # sorted_frequency = sorted(frequency_list.items(), key=lambda item: item[1], reverse=True)
+    #
+    #
+    # ngram_proportion = 1000000/len(tokens_pecase_uni_man) # Тут менять
+    #
+    # for elem in sorted_frequency:
+    #     prev = frequency
+    #     word = elem[0]
+    #     frequency = elem[1]
+    #     for filename in wordlists_pecase_uni_man.fileids(): # ТУТ МЕНЯТЬ
+    #         file = open(os.path.join(url_pecase, filename), 'r', encoding='cp1251')
+    #         text = file.read().lower().replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!',
+    #                                                                                                       '').replace(
+    #             '(', '').replace(')', '').replace('"', '').replace(':', '').replace(
+    #             '-', '')
+    #
+    #         if word in text:
+    #             count += 1
+    #             continue
+    #
+    #
+    #     if prev == frequency:
+    #         rank = rank
+    #     else:
+    #         rank = number
+    #     number += 1
+    #
+    #     if count>int(frequency):
+    #         count = frequency
+    #
+    #     word_obj = uni_pecase_man_ngram.objects.create(text = word, rank = rank, frequency = frequency, range = count, # ТУТ МЕНЯТЬ
+    #                                    normalized_freq=(ngram_proportion*float(frequency)).__round__(2), # ТУТ МЕНЯТЬ
+    #                                     normalized_range=(float(count)/len(wordlists_pecase_uni_man.fileids())).__round__(2), # ТУТ МЕНЯТЬ
+    #                                          ngram=n)
+    #     word_obj.save()
+    #
+    #
+    #     count = 0
     return render(request, 'home.html')
 
 
@@ -277,20 +359,20 @@ def pecase_word(response):
 
 
 def pecase_ngram(response):
-    current_info = Main_ngram.objects.filter(ngram=3)
+    current_info = Main_pecase_ngram.objects.filter(ngram=3)
     ngrams = 3
     if response.method == "GET":
-        discipline = response.GET.get('disciplines')
+        category_pecase = response.GET.get('category')
         ngrams = response.GET.get('n_gram_size')
         if ngrams is None:
             ngrams = 3
-        current_info = get_discipline_ngram(discipline, int(ngrams))
+        current_info = get_category_ngram(category_pecase, int(ngrams))
     else:
-        discipline = 'All'
+        category_pecase = 'All'
         ngrams = 3
     words = current_info
     myFilter = NgramFilter(response.GET, queryset=words)
     words = myFilter.qs
 
-    return render(response, 'pecase_ngram.html', context={'results':len(words),'discipline':discipline,
+    return render(response, 'pecase_ngram.html', context={'results':len(words),'category':category_pecase,
                                                                         'words':words, 'myFilter': myFilter, 'size': ngrams })

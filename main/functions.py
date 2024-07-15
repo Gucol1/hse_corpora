@@ -1,6 +1,8 @@
 from main.models import (Main, BI_PE, LAW, POLIT, M, E, HIST, Main_ngram, BI_PE_ngram, LAW_ngram, POLIT_ngram,
                          M_ngram, E_ngram, HIST_ngram, school_pecase_fem, school_pecase_man,school_pecase, uni_pecase,
-                         uni_pecase_fem, uni_pecase_man, uni_pecase_mf, Main_pecase)
+                         uni_pecase_fem, uni_pecase_man, uni_pecase_mf, Main_pecase, uni_pecase_ngram,
+                         school_pecase_ngram, school_pecase_fem_ngram, school_pecase_man_ngram, uni_pecase_mf_ngram,
+                         uni_pecase_fem_ngram, uni_pecase_man_ngram, Main_pecase_ngram)
 
 def get_discipline(discipline):
     if discipline == 'Computer Science':
@@ -57,6 +59,24 @@ def get_discipline_ngram(discipline, ngrams):
         current_info = Main_ngram.objects.all().filter(ngram=ngrams)
     return current_info
 
+def get_category_ngram(category, ngrams):
+    if category == 'School/College Students':
+        current_info = school_pecase_ngram.objects.all().filter(ngram=ngrams)
+    elif category == 'School/College Females':
+        current_info = school_pecase_fem_ngram.objects.all().filter(ngram=ngrams)
+    elif category == 'School/College Males':
+        current_info = school_pecase_man_ngram.objects.all().filter(ngram=ngrams)
+    elif category == 'Undergraduate Students':
+        current_info = uni_pecase_ngram.objects.all().filter(ngram=ngrams)
+    elif category == 'Undergraduate Females':
+        current_info = uni_pecase_fem_ngram.objects.all().filter(ngram=ngrams)
+    elif category == 'Undergraduate Males':
+        current_info = uni_pecase_man_ngram.objects.all().filter(ngram=ngrams)
+    elif category == 'Undergraduate Males&Females':
+        current_info = uni_pecase_mf_ngram.objects.all().filter(ngram=ngrams)
+    else:
+        current_info = Main_pecase_ngram.objects.all().filter(ngram=ngrams)
+    return current_info
 
     # frequency_list = Counter(tokens_LAW) # Частоты слов ТУТ МЕНЯТЬ
     # # print(frequency_list)

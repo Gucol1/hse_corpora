@@ -21,5 +21,7 @@ class NgramFilter(django_filters.FilterSet):
     text = filters.CharFilter(lookup_expr="icontains", label="Word/Words:")
 
 
+
+
 class ConcordanceFilter(django_filters.FilterSet):
     word = django_filters.CharFilter(lookup_expr="icontains", label="Word/Words:")

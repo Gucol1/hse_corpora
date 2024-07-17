@@ -130,7 +130,7 @@ def get_category_ngram(category, ngrams):
 # n-грамы
 
     # n = 6 # ТУТ МЕНЯТЬ
-    # n_grams = ngrams(raw_text_POLIT.split(), n) # ТУТ МЕНЯТЬ
+    # n_grams = ngrams(raw_text_pecase_uni_mf.split(), n) # ТУТ МЕНЯТЬ
     # new_n_grams = []
     # for grams in n_grams:
     #     if (('.' or ',' or '?' or '!' or ':' or ';' or '-' or '' not in grams[0]) and
@@ -155,33 +155,30 @@ def get_category_ngram(category, ngrams):
     #         grams = ' '.join(grams)
     #         grams = grams.lower()
     #         new_n_grams.append(grams)
-    #         # print(grams)
     #
     # frequency_list = Counter(new_n_grams)
-    # current_info = frequency_list
     # number, rank, count, frequency = 1, 1, 0, 0
     # sorted_frequency = sorted(frequency_list.items(), key=lambda item: item[1], reverse=True)
     #
     #
-    # ngram_proportion = 1000000/len(tokens_POLIT) # Тут менять
+    # ngram_proportion = 1000000/len(tokens_pecase_uni_mf)  # Тут менять
     #
     # for elem in sorted_frequency:
     #     prev = frequency
     #     word = elem[0]
-    #     # print(word)
     #     frequency = elem[1]
-    #     for filename in wordlists_POLIT.fileids(): # ТУТ МЕНЯТЬ
-    #         file = open(os.path.join(url, filename), 'r', encoding='cp1251')
+    #     wordlist = wordlists_pecase_uni_mf.fileids()  # ТУТ МЕНЯТЬ
+    #     for filename in wordlist:
+    #         file = open(os.path.join(url_pecase, filename), 'r', encoding='cp1251')
     #         text = file.read().lower().replace(',', '').replace('.', '').replace(';', '').replace('?', '').replace('!',
     #                                                                                                       '').replace(
     #             '(', '').replace(')', '').replace('"', '').replace(':', '').replace(
     #             '-', '')
-    #         # print(tokens)
+    #
     #         if word in text:
     #             count += 1
     #             continue
     #
-    #     # print(word, count)
     #
     #     if prev == frequency:
     #         rank = rank
@@ -192,10 +189,11 @@ def get_category_ngram(category, ngrams):
     #     if count>int(frequency):
     #         count = frequency
     #
-    #     word_obj = POLIT_ngram.objects.create(text = word, rank = rank, frequency = frequency, range = count, # ТУТ МЕНЯТЬ
-    #                                    normalized_freq=(ngram_proportion*float(frequency)).__round__(2), # ТУТ МЕНЯТЬ
-    #                                     normalized_range=(float(count)/len(wordlists_POLIT.fileids())).__round__(2), # ТУТ МЕНЯТЬ
-    #                                          ngram=n)
+    #     word_obj = uni_pecase_mf_ngram.objects.create(text = word, rank = rank, frequency = frequency,  # ТУТ МЕНЯТЬ
+    #                                                       range = count,
+    #                                                       normalized_freq=(ngram_proportion*float(frequency)).__round__(2),
+    #                                                       normalized_range=(float(count)/len(wordlist)).__round__(2),
+    #                                                       ngram=n)
     #     word_obj.save()
     #
     #

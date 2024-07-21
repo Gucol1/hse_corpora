@@ -205,7 +205,7 @@ def peclap_kwic(response):  # Concordance
         line = 'Left Context;KWIC;Right Context'
         file.write(line+'\n')
         for object in concordances:
-            line = (str(object.left_print) + ';'+  str(object.query) +';' + str(object.right_print))
+            line = (object.left_print+  ';' + str(object.query) + ';' + object.right_print).replace('\n', '').replace('\r','')
             file.write(line + '\n')
         file.close()
 
@@ -318,7 +318,7 @@ def pecase_kwic(response): # Concordance
         line = 'Left Context;KWIC;Right Context'
         file.write(line+'\n')
         for object in concordances:
-            line = (str(object.left_print) + ';'+  str(object.query) +';' + str(object.right_print))
+            line = (object.left_print+  ';' + str(object.query) + ';' + object.right_print).replace('\n', '').replace('\r','')
             file.write(line + '\n')
         file.close()
 

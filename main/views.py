@@ -1,7 +1,7 @@
 import os
 # import nltk
 # import textblob
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 # from textblob import TextBlob
 from collections import Counter
 from .functions import get_discipline, get_discipline_ngram, get_category, get_category_ngram
@@ -279,8 +279,10 @@ def pecase_word(response):
 
 
 def pecase_ngram(response):
+    path = 'C:/Users/Admin/HSE_CORPORA/main/static/download/file.txt'
     current_info = Main_pecase_ngram.objects.filter(ngram=3)
     ngrams = 3
+
     if response.method == "GET":
         category_pecase = response.GET.get('category')
         ngrams = response.GET.get('n_gram_size')
@@ -293,6 +295,24 @@ def pecase_ngram(response):
     words = current_info
     myFilter = NgramFilter(response.GET, queryset=words)
     words = myFilter.qs
+
+    #  Загрузка
+    if response.GET.get("download"):
+        file = open(path, 'w')
+        line = 'N-gram,Rank,Raw Frequency,Raw Range, Normalized Frequency, Normalized Range'
+        file.write(line+'\n')
+        for object in words:
+            line = (str(object.text) + ','+  str(object.rank) +',' + str(object.frequency)+ ',' + str(object.range) +
+                    ','+ str(object.normalized_freq) +',' + str(object.normalized_range))
+            file.write(line + '\n')
+
+        file.close()
+
+        if os.path.exists(path):
+            with open(path, 'rb') as fh:
+                response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
+                return response
 
     return render(response, 'pecase_ngram.html', context={'results':len(words),'category':category_pecase,
                                                                         'words':words, 'myFilter': myFilter, 'size': ngrams })

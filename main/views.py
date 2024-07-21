@@ -21,6 +21,8 @@ from .filters import WordFilter, NgramFilter, WordFilterPecase
 # nltk.download('punkt')
 # nltk.download('gutenberg')
 
+path = 'C:/Users/Admin/HSE_CORPORA/main/static/download/file.txt'
+
 # Все дисциплины
 url = 'C:/Users/Admin/HSE_CORPORA/main/static/PECLAP'
 wordlists_all = PlaintextCorpusReader(url, '.*', encoding='cp1251')  # Все дисциплины
@@ -196,6 +198,23 @@ def peclap_kwic(response):  # Concordance
     result = len(concordances)
     print(result)
     query_word = ' '.join(query_word)
+
+
+    if response.GET.get("download"):
+        file = open(path, 'w')
+        line = 'Left Context;KWIC;Right Context'
+        file.write(line+'\n')
+        for object in concordances:
+            line = (str(object.left_print) + ';'+  str(object.query) +';' + str(object.right_print))
+            file.write(line + '\n')
+        file.close()
+
+        if os.path.exists(path):
+            with open(path, 'rb') as fh:
+                response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
+                return response
+
     return render(response, 'peclap_kwic.html', context={'concordances': concordances, 'result': result,
                                                          'discipline': discipline, 'query_word': query_word})
 
@@ -214,6 +233,25 @@ def peclap_word(response):
     words = current_info
     myFilter = WordFilter(response.GET, queryset=words)
     words = myFilter.qs
+
+    #  Загрузка
+    if response.GET.get("download"):
+        file = open(path, 'w')
+        line = 'Word,Rank,Raw Frequency,Raw Range, Normalized Frequency, Normalized Range'
+        file.write(line+'\n')
+        for object in words:
+            line = (str(object.word) + ','+  str(object.rank) +',' + str(object.frequency)+ ',' + str(object.range) +
+                    ','+ str(object.normalized_freq) +',' + str(object.normalized_range))
+            file.write(line + '\n')
+
+        file.close()
+
+        if os.path.exists(path):
+            with open(path, 'rb') as fh:
+                response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
+                return response
+
     return render(response, 'peclap_word.html', context={'results':len(words),'discipline':discipline,
                                                                         'words':words, 'myFilter': myFilter })
 
@@ -232,6 +270,24 @@ def peclap_ngram(response):
     words = current_info
     myFilter = NgramFilter(response.GET, queryset=words)
     words = myFilter.qs
+
+    #  Загрузка
+    if response.GET.get("download"):
+        file = open(path, 'w')
+        line = 'N-gram,Rank,Raw Frequency,Raw Range, Normalized Frequency, Normalized Range'
+        file.write(line+'\n')
+        for object in words:
+            line = (str(object.text) + ',' +  str(object.rank) +',' + str(object.frequency)+ ',' + str(object.range) +
+                    ','+ str(object.normalized_freq) +',' + str(object.normalized_range))
+            file.write(line + '\n')
+
+        file.close()
+
+        if os.path.exists(path):
+            with open(path, 'rb') as fh:
+                response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
+                return response
 
     return render(response, 'peclap_ngram.html', context={'results':len(words),'discipline':discipline,
                                                                         'words':words, 'myFilter': myFilter, 'size': ngrams })
@@ -255,6 +311,23 @@ def pecase_kwic(response): # Concordance
     result = len(concordances)
     print(result)
     query_word = ' '.join(query_word)
+
+
+    if response.GET.get("download"):
+        file = open(path, 'w')
+        line = 'Left Context;KWIC;Right Context'
+        file.write(line+'\n')
+        for object in concordances:
+            line = (str(object.left_print) + ';'+  str(object.query) +';' + str(object.right_print))
+            file.write(line + '\n')
+        file.close()
+
+        if os.path.exists(path):
+            with open(path, 'rb') as fh:
+                response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
+                return response
+
     return render(response, 'pecase_kwic.html', context={'concordances': concordances, 'result': result,
                                                          'category': category_pecase, 'query_word': query_word})
 
@@ -274,12 +347,29 @@ def pecase_word(response):
     words = current_info
     myFilter_pecase = WordFilterPecase(response.GET, queryset=words)
     words = myFilter_pecase.qs
+
+    if response.GET.get("download"):
+        file = open(path, 'w')
+        line = 'Word,Rank,Raw Frequency,Raw Range, Normalized Frequency, Normalized Range'
+        file.write(line+'\n')
+        for object in words:
+            line = (str(object.word) + ','+  str(object.rank) +',' + str(object.frequency)+ ',' + str(object.range) +
+                    ','+ str(object.normalized_freq) +',' + str(object.normalized_range))
+            file.write(line + '\n')
+
+        file.close()
+
+        if os.path.exists(path):
+            with open(path, 'rb') as fh:
+                response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
+                return response
+
     return render(response, 'pecase_word.html', context={'results': len(words), 'category': category_pecase,
                                                                         'words': words, 'myFilter': myFilter_pecase})
 
 
 def pecase_ngram(response):
-    path = 'C:/Users/Admin/HSE_CORPORA/main/static/download/file.txt'
     current_info = Main_pecase_ngram.objects.filter(ngram=3)
     ngrams = 3
 

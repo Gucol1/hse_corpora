@@ -30,6 +30,7 @@ words_all = wordlists_all.words(fileids=wordlists_all.fileids())  # Все сл�
 raw_text_all = wordlists_all.raw()  # Весь текст
 discipline = 'All'
 category_pecase = 'All'
+page = '50'
 
 # Все полы pecase
 url_pecase = 'C:/Users/Admin/HSE_CORPORA/main/static/PECASE'
@@ -189,10 +190,13 @@ def peclap_kwic(response):  # Concordance
         query_word = response.GET.get('word')  # Слово для поиска конкорданса
         if query_word is None:
             query_word = ''
+        page = response.GET.get('pages')
+        if page is None: page = '50'
     else:
         text = Text(list(raw_text_all.split(' ')))
         query_word = ''
         discipline = 'All'
+        page = '50'
     query_word = list(query_word.split(' '))
     concordances = text.concordance_list(query_word, lines=100000, )
     result = len(concordances)
@@ -215,8 +219,12 @@ def peclap_kwic(response):  # Concordance
                 response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
                 return response
 
+    if page != 'All':
+        concordances = concordances[:int(page)]
+    page = str(page)
+
     return render(response, 'peclap_kwic.html', context={'concordances': concordances, 'result': result,
-                                                         'discipline': discipline, 'query_word': query_word})
+                                                         'discipline': discipline, 'query_word': query_word, 'page':page})
 
 def peclap_info(request):
     return render(request, 'peclap_info.html', context={'tokens': tokens_all_len,
@@ -228,8 +236,11 @@ def peclap_word(response):
     if response.method == "GET":
         discipline = response.GET.get('disciplines')
         current_info = get_discipline(discipline)
+        page = response.GET.get('pages')
+        if page is None: page = '50'
     else:
         discipline = 'All'
+        page = '50'
     words = current_info
     myFilter = WordFilter(response.GET, queryset=words)
     words = myFilter.qs
@@ -252,8 +263,14 @@ def peclap_word(response):
                 response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
                 return response
 
-    return render(response, 'peclap_word.html', context={'results':len(words),'discipline':discipline,
-                                                                        'words':words, 'myFilter': myFilter })
+
+    results = len(words)
+    if page != 'All':
+        words = words[:int(page)]
+    page = str(page)
+
+    return render(response, 'peclap_word.html', context={'results':results,'discipline':discipline,
+                                                                        'words':words, 'myFilter': myFilter, 'page':page })
 
 
 def peclap_ngram(response):
@@ -264,8 +281,11 @@ def peclap_ngram(response):
         if ngrams is None:
             ngrams = 3
         current_info = get_discipline_ngram(discipline, int(ngrams))
+        page = response.GET.get('pages')
+        if page is None: page = '50'
     else:
         discipline = 'All'
+        page = '50'
         ngrams = 3
     words = current_info
     myFilter = NgramFilter(response.GET, queryset=words)
@@ -289,7 +309,12 @@ def peclap_ngram(response):
                 response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
                 return response
 
-    return render(response, 'peclap_ngram.html', context={'results':len(words),'discipline':discipline,
+    results = len(words)
+    if page != 'All':
+        words = words[:int(page)]
+    page = str(page)
+
+    return render(response, 'peclap_ngram.html', context={'results':results, 'page' :page, 'discipline':discipline,
                                                                         'words':words, 'myFilter': myFilter, 'size': ngrams })
 
 
@@ -302,7 +327,10 @@ def pecase_kwic(response): # Concordance
         query_word = response.GET.get('word')  # Слово для поиска конкорданса
         if query_word is None:
             query_word = ''
+        page = response.GET.get('pages')
+        if page is None: page = '50'
     else:
+        page = '50'
         text = Text(list(raw_text_all_pecase.split(' ')))
         query_word = ''
         category_pecase = 'All'
@@ -328,7 +356,12 @@ def pecase_kwic(response): # Concordance
                 response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
                 return response
 
-    return render(response, 'pecase_kwic.html', context={'concordances': concordances, 'result': result,
+    if page != 'All':
+        concordances = concordances[:int(page)]
+    page = str(page)
+
+
+    return render(response, 'pecase_kwic.html', context={'page':page, 'concordances': concordances, 'result': result,
                                                          'category': category_pecase, 'query_word': query_word})
 
 
@@ -342,7 +375,10 @@ def pecase_word(response):
     if response.method == "GET":
         category_pecase = response.GET.get('category')
         current_info = get_category(category_pecase)
+        page = response.GET.get('pages')
+        if page is None: page = '50'
     else:
+        page = '50'
         category_pecase = 'All'
     words = current_info
     myFilter_pecase = WordFilterPecase(response.GET, queryset=words)
@@ -365,7 +401,12 @@ def pecase_word(response):
                 response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
                 return response
 
-    return render(response, 'pecase_word.html', context={'results': len(words), 'category': category_pecase,
+    results = len(words)
+    if page != 'All':
+        words = words[:int(page)]
+    page = str(page)
+
+    return render(response, 'pecase_word.html', context={'page':page, 'results': results, 'category': category_pecase,
                                                                         'words': words, 'myFilter': myFilter_pecase})
 
 
@@ -379,7 +420,10 @@ def pecase_ngram(response):
         if ngrams is None:
             ngrams = 3
         current_info = get_category_ngram(category_pecase, int(ngrams))
+        page = response.GET.get('pages')
+        if page is None: page = '50'
     else:
+        page = '50'
         category_pecase = 'All'
         ngrams = 3
     words = current_info
@@ -404,5 +448,10 @@ def pecase_ngram(response):
                 response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
                 return response
 
-    return render(response, 'pecase_ngram.html', context={'results':len(words),'category':category_pecase,
+    results = len(words)
+    if page != 'All':
+        words = words[:int(page)]
+    page = str(page)
+
+    return render(response, 'pecase_ngram.html', context={'page':page, 'results':results,'category':category_pecase,
                                                                         'words':words, 'myFilter': myFilter, 'size': ngrams })
